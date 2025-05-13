@@ -1,4 +1,3 @@
-import { Image } from "lucide-react";
 import { Link } from "react-router-dom";
 import { BedDouble, Check, Coffee, Tv, Wifi } from "lucide-react";
 
@@ -32,9 +31,9 @@ const roomTypes = [
       "Daily Housekeeping",
     ],
     images: [
-      "/hotelui/public/images/2.jpg",
-      "/hotelui/public/images/3.jpg",
-      "/hotelui/public/images/9.jpg",
+      "public/images/2.jpg",
+      "public/images/3.jpg",
+      "public/images/9.jpg",
     ],
   },
   {
@@ -56,9 +55,9 @@ const roomTypes = [
       "Daily Housekeeping",
     ],
     images: [
-      "/hotelui/public/images/3.jpg",
-      "/hotelui/public/images/2.jpg",
-      "/hotelui/public/images/9.jpg",
+      "public/images/3.jpg",
+      "public/images/2.jpg",
+      "public/images/9.jpg",
     ],
   },
   {
@@ -82,9 +81,9 @@ const roomTypes = [
       "Executive Lounge Access",
     ],
     images: [
-      "/hotelui/public/images/9.jpg",
-      "/hotelui/public/images/3.jpg",
-      "/hotelui/public/images/2.jpg",
+      "public/images/9.jpg",
+      "public/images/3.jpg",
+      "public/images/2.jpg",
     ],
   },
 ];
