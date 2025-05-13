@@ -59,8 +59,12 @@ export default function HomePage() {
       <div className="flex flex-col">
         {/* Hero Section */}
         <section className="relative overflow-hidden h-[80vh] w-full">
-          <img src={foto4} alt="Luxury Hotel" className="object-cover w-full" />
-          <div className="absolute inset-0 bg-black/40" />
+          <img
+            src={foto4}
+            alt="Luxury Hotel"
+            className="absolute inset-0 z-0 object-cover w-full h-full"
+          />
+          <div className="absolute inset-0 z-0 bg-black/40" />
           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               Rasakan Kemewahan & Kenyamanan
