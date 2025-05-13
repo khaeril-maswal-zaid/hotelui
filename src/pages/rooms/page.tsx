@@ -32,9 +32,9 @@ const roomTypes = [
       "Daily Housekeeping",
     ],
     images: [
-      "public/images/2.jpg",
-      "public/images/3.jpg",
-      "public/images/9.jpg",
+      "/hotelui/public/images/2.jpg",
+      "/hotelui/public/images/3.jpg",
+      "/hotelui/public/images/9.jpg",
     ],
   },
   {
@@ -56,9 +56,9 @@ const roomTypes = [
       "Daily Housekeeping",
     ],
     images: [
-      "public/images/3.jpg",
-      "public/images/2.jpg",
-      "public/images/9.jpg",
+      "/hotelui/public/images/3.jpg",
+      "/hotelui/public/images/2.jpg",
+      "/hotelui/public/images/9.jpg",
     ],
   },
   {
@@ -82,9 +82,9 @@ const roomTypes = [
       "Executive Lounge Access",
     ],
     images: [
-      "public/images/9.jpg",
-      "public/images/3.jpg",
-      "public/images/2.jpg",
+      "/hotelui/public/images/9.jpg",
+      "/hotelui/public/images/3.jpg",
+      "/hotelui/public/images/2.jpg",
     ],
   },
 ];
