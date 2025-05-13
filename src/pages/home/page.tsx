@@ -23,6 +23,12 @@ import { BookingForm } from "@/components/booking-form";
 
 import MainLayout from "@/components/layout/main-layout";
 
+import foto4 from "../../images/4.jpg";
+import foto9 from "../../images/9.jpg";
+import foto2 from "../../images/2.jpg";
+import foto3 from "../../images/3.jpg";
+import foto10 from "../../images/10.jpg";
+
 const features = [
   {
     icon: Wifi,
@@ -52,11 +58,7 @@ export default function HomePage() {
       <div className="flex flex-col">
         {/* Hero Section */}
         <section className="relative overflow-hidden h-[80vh] w-full">
-          <img
-            src="public/images/4.jpg"
-            alt="Luxury Hotel"
-            className="object-cover w-full"
-          />
+          <img src={foto4} alt="Luxury Hotel" className="object-cover w-full" />
           <div className="absolute inset-0 bg-black/40" />
           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -179,7 +181,7 @@ export default function HomePage() {
               <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src="public/images/2.jpg"
+                    src={foto2}
                     alt="Kamar Standard"
                     className="object-cover transition-transform hover:scale-105"
                   />
@@ -219,7 +221,7 @@ export default function HomePage() {
               <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src="public/images/3.jpg"
+                    src={foto3}
                     alt="Kamar Deluxe"
                     className="object-cover transition-transform hover:scale-105"
                   />
@@ -259,7 +261,7 @@ export default function HomePage() {
               <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src="public/images/9.jpg"
+                    src={foto9}
                     alt="Suite"
                     className="object-cover transition-transform hover:scale-105"
                   />
@@ -363,7 +365,7 @@ export default function HomePage() {
 
               <div className="relative h-[400px] overflow-hidden rounded-lg">
                 <img
-                  src="public/images/10.jpg"
+                  src={foto10}
                   alt="Lokasi Peta Hotel"
                   className="object-cover h-full"
                 />
