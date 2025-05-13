@@ -75,21 +75,21 @@ export default function RoomsPage() {
     <AdminLayout>
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Room Management</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Manajemen Kamar</h1>
           <p className="text-muted-foreground">
-            Manage your hotel rooms, types, and availability
+            Kelola kamar hotel Anda, jenisnya, dan ketersediaannya
           </p>
         </div>
         <Button>
           <Plus className="mr-2 h-4 w-4" />
-          Add New Room
+          Tambah Kamar Baru
         </Button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Rooms</CardTitle>
+            <CardTitle className="text-sm font-medium">Total Kamar</CardTitle>
             <BedDouble className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -98,7 +98,7 @@ export default function RoomsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Available</CardTitle>
+            <CardTitle className="text-sm font-medium">Tersedia</CardTitle>
             <div className="h-2 w-2 rounded-full bg-green-500" />
           </CardHeader>
           <CardContent>
@@ -107,7 +107,7 @@ export default function RoomsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Occupied</CardTitle>
+            <CardTitle className="text-sm font-medium">Terisi</CardTitle>
             <div className="h-2 w-2 rounded-full bg-red-500" />
           </CardHeader>
           <CardContent>
@@ -118,21 +118,21 @@ export default function RoomsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Room List</CardTitle>
+          <CardTitle>Daftar Kamar</CardTitle>
           <CardDescription>
-            View and manage all rooms in your hotel
+            Lihat dan kelola semua kamar di hotel Anda
           </CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Room #</TableHead>
-                <TableHead>Type</TableHead>
-                <TableHead>Capacity</TableHead>
-                <TableHead>Price/Night</TableHead>
+                <TableHead>Kamar #</TableHead>
+                <TableHead>Jenis</TableHead>
+                <TableHead>Kapasitas</TableHead>
+                <TableHead>Harga/Malam</TableHead>
                 <TableHead>Status</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+                <TableHead className="text-right">Aksi</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -140,8 +140,8 @@ export default function RoomsPage() {
                 <TableRow key={room.id}>
                   <TableCell className="font-medium">{room.number}</TableCell>
                   <TableCell>{room.type}</TableCell>
-                  <TableCell>{room.capacity} guests</TableCell>
-                  <TableCell>${room.price}</TableCell>
+                  <TableCell>{room.capacity} tamu</TableCell>
+                  <TableCell>Rp{room.price}</TableCell>
                   <TableCell>
                     <Badge
                       variant={
@@ -152,19 +152,23 @@ export default function RoomsPage() {
                           : "secondary"
                       }
                     >
-                      {room.status}
+                      {room.status === "Available"
+                        ? "Tersedia"
+                        : room.status === "Occupied"
+                        ? "Terisi"
+                        : room.status}
                     </Badge>
                   </TableCell>
                   <TableCell className="text-right">
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" className="h-8 w-8 p-0">
-                          <span className="sr-only">Open menu</span>
+                          <span className="sr-only">Buka menu</span>
                           <MoreHorizontal className="h-4 w-4" />
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                        <DropdownMenuLabel>Aksi</DropdownMenuLabel>
                         <DropdownMenuItem>
                           <Edit className="mr-2 h-4 w-4" />
                           <span>Edit</span>
@@ -172,7 +176,7 @@ export default function RoomsPage() {
                         <DropdownMenuSeparator />
                         <DropdownMenuItem className="text-destructive">
                           <Trash className="mr-2 h-4 w-4" />
-                          <span>Delete</span>
+                          <span>Hapus</span>
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>

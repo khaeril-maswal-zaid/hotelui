@@ -20,11 +20,10 @@ export default function ContactPage() {
       <div className="container mx-auto py-10 md:py-16">
         <div className="text-center">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Contact Us
+            Hubungi Kami
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Have questions or need assistance? Our team is here to help you with
-            any inquiries.
+            Punya pertanyaan atau butuh bantuan? Tim kami siap membantu Anda.
           </p>
         </div>
 
@@ -32,40 +31,40 @@ export default function ContactPage() {
           <div>
             <Card>
               <CardHeader>
-                <CardTitle>Send Us a Message</CardTitle>
+                <CardTitle>Kirim Pesan kepada Kami</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as
-                  possible.
+                  Isi formulir di bawah ini dan kami akan segera menghubungi
+                  Anda.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" placeholder="Your name" />
+                      <Label htmlFor="name">Nama</Label>
+                      <Input id="name" placeholder="Nama Anda" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="Your email" />
+                      <Input id="email" type="email" placeholder="Email Anda" />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="Subject of your message" />
+                    <Label htmlFor="subject">Subjek</Label>
+                    <Input id="subject" placeholder="Subjek pesan Anda" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">Pesan</Label>
                     <Textarea
                       id="message"
-                      placeholder="Your message"
+                      placeholder="Pesan Anda"
                       className="min-h-[150px] resize-none"
                     />
                   </div>
                 </form>
               </CardContent>
               <CardFooter>
-                <Button className="w-full">Send Message</Button>
+                <Button className="w-full">Kirim Pesan</Button>
               </CardFooter>
             </Card>
           </div>
@@ -73,25 +72,25 @@ export default function ContactPage() {
           <div className="space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
+                <CardTitle>Informasi Kontak</CardTitle>
                 <CardDescription>
-                  Reach out to us using the following contact details.
+                  Hubungi kami melalui informasi kontak berikut.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start">
                   <MapPin className="mr-3 h-5 w-5 text-primary" />
                   <div>
-                    <h3 className="font-medium">Address</h3>
+                    <h3 className="font-medium">Alamat</h3>
                     <p className="text-muted-foreground">
-                      123 Luxury Avenue, City Center, Country
+                      123 Luxury Avenue, Pusat Kota, Negara
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="mr-3 h-5 w-5 text-primary" />
                   <div>
-                    <h3 className="font-medium">Phone</h3>
+                    <h3 className="font-medium">Telepon</h3>
                     <p className="text-muted-foreground">+1 (555) 123-4567</p>
                   </div>
                 </div>
@@ -109,36 +108,36 @@ export default function ContactPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Business Hours</CardTitle>
+                <CardTitle>Jam Operasional</CardTitle>
                 <CardDescription>
-                  Our reception is open 24/7 to assist you.
+                  Resepsionis kami buka 24 jam untuk membantu Anda.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>24 Hours</span>
+                    <span>Senin - Jumat</span>
+                    <span>24 Jam</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday - Sunday</span>
-                    <span>24 Hours</span>
+                    <span>Sabtu - Minggu</span>
+                    <span>24 Jam</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Holidays</span>
-                    <span>24 Hours</span>
+                    <span>Hari Libur</span>
+                    <span>24 Jam</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <div className="relative h-[300px] overflow-hidden rounded-lg bg-muted">
+            {/* <div className="relative h-[300px] overflow-hidden rounded-lg bg-muted">
               <div className="flex h-full items-center justify-center">
                 <p className="text-center text-muted-foreground">
-                  Interactive map will be displayed here
+                  Peta interaktif akan ditampilkan di sini
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

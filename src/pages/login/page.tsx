@@ -74,23 +74,22 @@ export default function LoginPage() {
           <div className="flex justify-center mb-6">
             <div className="flex items-center gap-2">
               <Hotel className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold">Luxury Hotel</span>
+              <span className="text-2xl font-bold">Hotel Mewah</span>
             </div>
           </div>
 
           <Tabs defaultValue="login" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="login">Login</TabsTrigger>
-              <TabsTrigger value="signup">Sign Up</TabsTrigger>
+              <TabsTrigger value="login">Masuk</TabsTrigger>
+              <TabsTrigger value="signup">Daftar</TabsTrigger>
             </TabsList>
 
             <TabsContent value="login">
               <Card>
                 <CardHeader>
-                  <CardTitle>Welcome back</CardTitle>
+                  <CardTitle>Selamat datang kembali</CardTitle>
                   <CardDescription>
-                    Login to your account to manage your bookings and
-                    preferences
+                    Masuk ke akun Anda untuk mengelola pemesanan dan preferensi
                   </CardDescription>
                 </CardHeader>
                 <form onSubmit={handleLogin}>
@@ -112,7 +111,7 @@ export default function LoginPage() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="your.email@example.com"
+                        placeholder="email.anda@contoh.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
@@ -120,12 +119,12 @@ export default function LoginPage() {
                     </div>
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <Label htmlFor="password">Password</Label>
+                        <Label htmlFor="password">Kata Sandi</Label>
                         <Link
                           to="/forgot-password"
                           className="text-xs text-muted-foreground hover:text-primary"
                         >
-                          Forgot password?
+                          Lupa kata sandi?
                         </Link>
                       </div>
                       <div className="relative">
@@ -150,7 +149,9 @@ export default function LoginPage() {
                             <Eye className="h-4 w-4 text-muted-foreground" />
                           )}
                           <span className="sr-only">
-                            {showPassword ? "Hide password" : "Show password"}
+                            {showPassword
+                              ? "Sembunyikan kata sandi"
+                              : "Tampilkan kata sandi"}
                           </span>
                         </Button>
                       </div>
@@ -161,14 +162,14 @@ export default function LoginPage() {
                         htmlFor="remember"
                         className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
-                        Remember me
+                        Ingat saya
                       </label>
                     </div>
                   </CardContent>
                   <CardFooter>
                     <Button type="submit" className="w-full">
                       <LogIn className="mr-2 h-4 w-4" />
-                      Login
+                      Masuk
                     </Button>
                   </CardFooter>
                 </form>
@@ -178,9 +179,10 @@ export default function LoginPage() {
             <TabsContent value="signup">
               <Card>
                 <CardHeader>
-                  <CardTitle>Create an account</CardTitle>
+                  <CardTitle>Buat akun</CardTitle>
                   <CardDescription>
-                    Sign up to enjoy exclusive benefits and manage your bookings
+                    Daftar untuk menikmati manfaat eksklusif dan mengelola
+                    pemesanan Anda
                   </CardDescription>
                 </CardHeader>
                 <form onSubmit={handleSignUp}>
@@ -198,7 +200,7 @@ export default function LoginPage() {
                     )}
 
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
+                      <Label htmlFor="name">Nama Lengkap</Label>
                       <Input
                         id="name"
                         placeholder="John Doe"
@@ -212,14 +214,14 @@ export default function LoginPage() {
                       <Input
                         id="signup-email"
                         type="email"
-                        placeholder="your.email@example.com"
+                        placeholder="email.anda@contoh.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="signup-password">Password</Label>
+                      <Label htmlFor="signup-password">Kata Sandi</Label>
                       <div className="relative">
                         <Input
                           id="signup-password"
@@ -242,13 +244,17 @@ export default function LoginPage() {
                             <Eye className="h-4 w-4 text-muted-foreground" />
                           )}
                           <span className="sr-only">
-                            {showPassword ? "Hide password" : "Show password"}
+                            {showPassword
+                              ? "Sembunyikan kata sandi"
+                              : "Tampilkan kata sandi"}
                           </span>
                         </Button>
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="confirm-password">Confirm Password</Label>
+                      <Label htmlFor="confirm-password">
+                        Konfirmasi Kata Sandi
+                      </Label>
                       <Input
                         id="confirm-password"
                         type="password"
@@ -264,19 +270,19 @@ export default function LoginPage() {
                         htmlFor="terms"
                         className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
-                        I agree to the{" "}
+                        Saya setuju dengan{" "}
                         <Link
                           to="/terms"
                           className="text-primary hover:underline"
                         >
-                          terms and conditions
+                          syarat dan ketentuan
                         </Link>
                       </label>
                     </div>
                   </CardContent>
                   <CardFooter>
                     <Button type="submit" className="w-full">
-                      Create Account
+                      Buat Akun
                     </Button>
                   </CardFooter>
                 </form>

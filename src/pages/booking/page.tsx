@@ -89,19 +89,19 @@ export default function BookingPage() {
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
             <h1 className="text-3xl font-bold tracking-tight">
-              Book Your Stay
+              Pesan Penginapan Anda
             </h1>
             <p className="mt-2 text-muted-foreground">
-              Fill out the form below to make your reservation
+              Isi formulir di bawah ini untuk melakukan reservasi Anda
             </p>
           </div>
 
           <Card className="mt-8">
             <CardHeader>
-              <CardTitle>Reservation Details</CardTitle>
+              <CardTitle>Detail Reservasi</CardTitle>
               <CardDescription>
-                Please provide all the required information to complete your
-                booking
+                Silakan isi semua informasi yang diperlukan untuk menyelesaikan
+                pemesanan
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -109,10 +109,10 @@ export default function BookingPage() {
                 <div className="grid gap-6 md:grid-cols-2">
                   <div className="space-y-4">
                     <div>
-                      <Label htmlFor="firstName">Full Name</Label>
+                      <Label htmlFor="firstName">Nama Lengkap</Label>
                       <Input
                         id="firstName"
-                        placeholder="Enter your full name"
+                        placeholder="Masukkan nama lengkap Anda"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
@@ -123,17 +123,17 @@ export default function BookingPage() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Masukkan alamat email Anda"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                       />
                     </div>
                     <div>
-                      <Label htmlFor="phone">Phone Number</Label>
+                      <Label htmlFor="phone">Nomor Telepon</Label>
                       <Input
                         id="phone"
-                        placeholder="Enter your phone number"
+                        placeholder="Masukkan nomor telepon Anda"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         required
@@ -143,26 +143,26 @@ export default function BookingPage() {
 
                   <div className="space-y-4">
                     <div>
-                      <Label htmlFor="roomType">Room Type</Label>
+                      <Label htmlFor="roomType">Tipe Kamar</Label>
                       <Select
                         value={selectedRoomType}
                         onValueChange={setSelectedRoomType}
                       >
                         <SelectTrigger id="roomType">
-                          <SelectValue placeholder="Select room type" />
+                          <SelectValue placeholder="Pilih tipe kamar" />
                         </SelectTrigger>
                         <SelectContent className="bg-white">
                           <SelectItem
                             className="hover:bg-gray-100 hover:shadow"
                             value="standard"
                           >
-                            Standard Room
+                            Kamar Standar
                           </SelectItem>
                           <SelectItem
-                            value="deluxe"
                             className="hover:bg-gray-100 hover:shadow"
+                            value="deluxe"
                           >
-                            Deluxe Room
+                            Kamar Deluxe
                           </SelectItem>
                           <SelectItem
                             className="hover:bg-gray-100 hover:shadow"
@@ -174,22 +174,22 @@ export default function BookingPage() {
                       </Select>
                     </div>
                     <div>
-                      <Label htmlFor="guests">Number of Guests</Label>
+                      <Label htmlFor="guests">Jumlah Tamu</Label>
                       <Select value={guests} onValueChange={setGuests}>
                         <SelectTrigger id="guests">
-                          <SelectValue placeholder="Select number of guests" />
+                          <SelectValue placeholder="Pilih jumlah tamu" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="1">1 Guest</SelectItem>
-                          <SelectItem value="2">2 Guests</SelectItem>
-                          <SelectItem value="3">3 Guests</SelectItem>
-                          <SelectItem value="4">4 Guests</SelectItem>
+                          <SelectItem value="1">1 Tamu</SelectItem>
+                          <SelectItem value="2">2 Tamu</SelectItem>
+                          <SelectItem value="3">3 Tamu</SelectItem>
+                          <SelectItem value="4">4 Tamu</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div className="grid gap-4 md:grid-cols-2">
                       <div>
-                        <Label>Check-in Date</Label>
+                        <Label>Tanggal Check-in</Label>
                         <Popover>
                           <PopoverTrigger asChild>
                             <Button
@@ -200,7 +200,9 @@ export default function BookingPage() {
                               )}
                             >
                               <CalendarIcon className="mr-2 h-4 w-4" />
-                              {checkIn ? format(checkIn, "PPP") : "Select date"}
+                              {checkIn
+                                ? format(checkIn, "PPP")
+                                : "Pilih tanggal"}
                             </Button>
                           </PopoverTrigger>
                           <PopoverContent className="w-auto p-0">
@@ -215,7 +217,7 @@ export default function BookingPage() {
                         </Popover>
                       </div>
                       <div>
-                        <Label>Check-out Date</Label>
+                        <Label>Tanggal Check-out</Label>
                         <Popover>
                           <PopoverTrigger asChild>
                             <Button
@@ -228,7 +230,7 @@ export default function BookingPage() {
                               <CalendarIcon className="mr-2 h-4 w-4" />
                               {checkOut
                                 ? format(checkOut, "PPP")
-                                : "Select date"}
+                                : "Pilih tanggal"}
                             </Button>
                           </PopoverTrigger>
                           <PopoverContent className="w-auto p-0">
@@ -250,10 +252,10 @@ export default function BookingPage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="specialRequests">Special Requests</Label>
+                  <Label htmlFor="specialRequests">Permintaan Khusus</Label>
                   <Textarea
                     id="specialRequests"
-                    placeholder="Any special requests or requirements"
+                    placeholder="Tulis permintaan atau kebutuhan khusus Anda"
                     className="resize-none"
                     value={specialRequests}
                     onChange={(e) => setSpecialRequests(e.target.value)}
@@ -261,24 +263,24 @@ export default function BookingPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-medium">Payment Information</h3>
+                  <h3 className="text-lg font-medium">Informasi Pembayaran</h3>
                   <div className="mt-4 grid gap-4 md:grid-cols-2">
                     <div>
-                      <Label htmlFor="cardName">Name on Card</Label>
+                      <Label htmlFor="cardName">Nama di Kartu</Label>
                       <Input
                         id="cardName"
-                        placeholder="Enter name on card"
+                        placeholder="Masukkan nama pada kartu"
                         value={cardName}
                         onChange={(e) => setCardName(e.target.value)}
                         required
                       />
                     </div>
                     <div>
-                      <Label htmlFor="cardNumber">Card Number</Label>
+                      <Label htmlFor="cardNumber">Nomor Kartu</Label>
                       <div className="relative">
                         <Input
                           id="cardNumber"
-                          placeholder="Enter card number"
+                          placeholder="Masukkan nomor kartu"
                           value={cardNumber}
                           onChange={(e) => setCardNumber(e.target.value)}
                           required
@@ -287,7 +289,7 @@ export default function BookingPage() {
                       </div>
                     </div>
                     <div>
-                      <Label htmlFor="expiryDate">Expiry Date</Label>
+                      <Label htmlFor="expiryDate">Tanggal Kedaluwarsa</Label>
                       <Input
                         id="expiryDate"
                         placeholder="MM/YY"
@@ -300,7 +302,7 @@ export default function BookingPage() {
                       <Label htmlFor="cvv">CVV</Label>
                       <Input
                         id="cvv"
-                        placeholder="Enter CVV"
+                        placeholder="Masukkan CVV"
                         value={cvv}
                         onChange={(e) => setCvv(e.target.value)}
                         required
@@ -310,7 +312,7 @@ export default function BookingPage() {
                 </div>
 
                 <Button type="submit" className="w-full" size="lg">
-                  Complete Booking
+                  Selesaikan Pemesanan
                 </Button>
               </form>
             </CardContent>

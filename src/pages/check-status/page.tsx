@@ -21,71 +21,70 @@ export default function CheckStatusPage() {
         <div className="mx-auto max-w-md">
           <div className="text-center">
             <h1 className="text-3xl font-bold tracking-tight">
-              Check Reservation Status
+              Cek Status Reservasi
             </h1>
             <p className="mt-2 text-muted-foreground">
-              Enter your reservation details to check your booking status
+              Masukkan detail reservasi Anda untuk memeriksa status pemesanan
             </p>
           </div>
 
           <Card className="mt-8">
             <CardHeader>
-              <CardTitle>Find Your Reservation</CardTitle>
+              <CardTitle>Temukan Reservasi Anda</CardTitle>
               <CardDescription>
-                Use your reservation number or email to check your booking
-                status
+                Gunakan nomor reservasi atau email untuk memeriksa status
+                pemesanan Anda
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Tabs defaultValue="reservation" className="w-full">
                 <TabsList className="grid w-full grid-cols-2">
-                  <TabsTrigger value="reservation">
-                    Reservation Number
-                  </TabsTrigger>
+                  <TabsTrigger value="reservation">Nomor Reservasi</TabsTrigger>
                   <TabsTrigger value="email">Email</TabsTrigger>
                 </TabsList>
                 <TabsContent value="reservation" className="mt-4">
                   <form className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="reservationNumber">
-                        Reservation Number
-                      </Label>
+                      <Label htmlFor="reservationNumber">Nomor Reservasi</Label>
                       <Input
                         id="reservationNumber"
-                        placeholder="Enter your reservation number"
+                        placeholder="Masukkan nomor reservasi Anda"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Enter your last name" />
+                      <Label htmlFor="lastName">Nama Belakang</Label>
+                      <Input
+                        id="lastName"
+                        placeholder="Masukkan nama belakang Anda"
+                      />
                     </div>
                     <Button type="submit" className="w-full">
                       <Search className="mr-2 h-4 w-4" />
-                      Check Status
+                      Cek Status
                     </Button>
                   </form>
                 </TabsContent>
                 <TabsContent value="email" className="mt-4">
                   <form className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address</Label>
+                      <Label htmlFor="email">Alamat Email</Label>
                       <Input
                         id="email"
                         type="email"
-                        placeholder="Enter your email address"
+                        placeholder="Masukkan alamat email Anda"
                       />
                     </div>
                     <Button type="submit" className="w-full">
                       <Search className="mr-2 h-4 w-4" />
-                      Find Reservations
+                      Temukan Reservasi
                     </Button>
                   </form>
                 </TabsContent>
               </Tabs>
             </CardContent>
             <CardFooter className="flex flex-col text-center text-sm text-muted-foreground">
-              <p>Having trouble finding your reservation?</p>
-              <p>Contact our support team at support@luxuryhotel.com</p>
+              <p>Kesulitan menemukan reservasi Anda?</p>
+              <p>Hubungi tim dukungan kami di support@luxuryhotel.com</p>
             </CardFooter>
           </Card>
         </div>

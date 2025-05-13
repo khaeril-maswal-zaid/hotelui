@@ -159,15 +159,15 @@ export default function ReservationsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">
-            Reservation Management
+            Manajemen Reservasi
           </h1>
           <p className="text-muted-foreground">
-            Manage bookings, check-ins, and check-outs
+            Kelola pemesanan, check-in, dan check-out
           </p>
         </div>
         <Button>
           <Calendar className="mr-2 h-4 w-4" />
-          New Reservation
+          Reservasi Baru
         </Button>
       </div>
 
@@ -175,7 +175,7 @@ export default function ReservationsPage() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              Total Reservations
+              Total Reservasi
             </CardTitle>
             <Calendar className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
@@ -185,7 +185,7 @@ export default function ReservationsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Confirmed</CardTitle>
+            <CardTitle className="text-sm font-medium">Terkonfirmasi</CardTitle>
             <Check className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -196,7 +196,9 @@ export default function ReservationsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Checked In</CardTitle>
+            <CardTitle className="text-sm font-medium">
+              Sudah Check-in
+            </CardTitle>
             <Clock className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -207,7 +209,7 @@ export default function ReservationsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Cancelled</CardTitle>
+            <CardTitle className="text-sm font-medium">Dibatalkan</CardTitle>
             <X className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -220,32 +222,32 @@ export default function ReservationsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Reservations</CardTitle>
+          <CardTitle>Reservasi</CardTitle>
           <CardDescription>
-            Manage all hotel reservations and their status
+            Kelola semua reservasi hotel dan statusnya
           </CardDescription>
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="all" onValueChange={setSelectedTab}>
             <TabsList className="mb-4">
-              <TabsTrigger value="all">All Reservations</TabsTrigger>
-              <TabsTrigger value="upcoming">Upcoming</TabsTrigger>
-              <TabsTrigger value="current">Current Stays</TabsTrigger>
-              <TabsTrigger value="past">Past Stays</TabsTrigger>
+              <TabsTrigger value="all">Semua Reservasi</TabsTrigger>
+              <TabsTrigger value="upcoming">Akan Datang</TabsTrigger>
+              <TabsTrigger value="current">Sedang Menginap</TabsTrigger>
+              <TabsTrigger value="past">Telah Menginap</TabsTrigger>
             </TabsList>
 
             <div className="rounded-md border">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Reservation ID</TableHead>
-                    <TableHead>Guest</TableHead>
-                    <TableHead>Room</TableHead>
+                    <TableHead>ID Reservasi</TableHead>
+                    <TableHead>Tamu</TableHead>
+                    <TableHead>Kamar</TableHead>
                     <TableHead>Check-in</TableHead>
                     <TableHead>Check-out</TableHead>
                     <TableHead>Status</TableHead>
-                    <TableHead>Payment</TableHead>
-                    <TableHead className="text-right">Actions</TableHead>
+                    <TableHead>Pembayaran</TableHead>
+                    <TableHead className="text-right">Aksi</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>

@@ -74,15 +74,15 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {!simplified && (
           <div className="space-y-2 sm:col-span-2 md:col-span-3 lg:col-span-4">
-            <h3 className="text-lg font-medium">Guest Information</h3>
+            <h3 className="text-lg font-medium">Informasi Tamu</h3>
           </div>
         )}
 
         <div className="space-y-2">
-          <Label htmlFor="name">Full Name</Label>
+          <Label htmlFor="name">Nama Lengkap</Label>
           <Input
             id="name"
-            placeholder="Enter your name"
+            placeholder="Masukkan nama Anda"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -90,7 +90,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="checkIn">Check-in Date</Label>
+          <Label htmlFor="checkIn">Tanggal Check-in</Label>
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -102,7 +102,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
                 )}
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
-                {checkIn ? format(checkIn, "PPP") : "Select date"}
+                {checkIn ? format(checkIn, "PPP") : "Pilih tanggal"}
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0">
@@ -118,7 +118,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="checkOut">Check-out Date</Label>
+          <Label htmlFor="checkOut">Tanggal Check-out</Label>
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -130,7 +130,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
                 )}
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
-                {checkOut ? format(checkOut, "PPP") : "Select date"}
+                {checkOut ? format(checkOut, "PPP") : "Pilih tanggal"}
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0">
@@ -148,17 +148,17 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="guests">Guests</Label>
+          <Label htmlFor="guests">Tamu</Label>
           <Select value={guests} onValueChange={setGuests}>
             <SelectTrigger id="guests">
-              <SelectValue placeholder="Number of guests" />
+              <SelectValue placeholder="Jumlah tamu" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="1">1 Guest</SelectItem>
-              <SelectItem value="2">2 Guests</SelectItem>
-              <SelectItem value="3">3 Guests</SelectItem>
-              <SelectItem value="4">4 Guests</SelectItem>
-              <SelectItem value="5">5+ Guests</SelectItem>
+              <SelectItem value="1">1 Tamu</SelectItem>
+              <SelectItem value="2">2 Tamu</SelectItem>
+              <SelectItem value="3">3 Tamu</SelectItem>
+              <SelectItem value="4">4 Tamu</SelectItem>
+              <SelectItem value="5">5+ Tamu</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -166,14 +166,14 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
         {simplified && (
           <>
             <div className="space-y-2">
-              <Label htmlFor="roomType">Room Type</Label>
+              <Label htmlFor="roomType">Tipe Kamar</Label>
               <Select value={roomType} onValueChange={setRoomType}>
                 <SelectTrigger id="roomType">
-                  <SelectValue placeholder="Select room type" />
+                  <SelectValue placeholder="Pilih tipe kamar" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="standard">Standard Room</SelectItem>
-                  <SelectItem value="deluxe">Deluxe Room</SelectItem>
+                  <SelectItem value="standard">Kamar Standar</SelectItem>
+                  <SelectItem value="deluxe">Kamar Deluxe</SelectItem>
                   <SelectItem value="suite">Suite</SelectItem>
                 </SelectContent>
               </Select>
@@ -184,7 +184,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
               <Input
                 id="email"
                 type="email"
-                placeholder="Your email address"
+                placeholder="Alamat email Anda"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -192,10 +192,10 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="phone">Phone</Label>
+              <Label htmlFor="phone">Telepon</Label>
               <Input
                 id="phone"
-                placeholder="Your phone number"
+                placeholder="Nomor telepon Anda"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
@@ -203,7 +203,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
 
             <div className="flex items-end">
               <Button type="submit" className="w-full">
-                Check Availability
+                Cek Ketersediaan
               </Button>
             </div>
           </>
@@ -212,25 +212,25 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
         {!simplified && (
           <>
             <div className="space-y-2 sm:col-span-2 md:col-span-3 lg:col-span-4">
-              <h3 className="text-lg font-medium">Room Selection</h3>
+              <h3 className="text-lg font-medium">Pilihan Kamar</h3>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="roomType">Room Type</Label>
+              <Label htmlFor="roomType">Tipe Kamar</Label>
               <Select value={roomType} onValueChange={setRoomType}>
                 <SelectTrigger id="roomType">
-                  <SelectValue placeholder="Select room type" />
+                  <SelectValue placeholder="Pilih tipe kamar" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="standard">Standard Room</SelectItem>
-                  <SelectItem value="deluxe">Deluxe Room</SelectItem>
+                  <SelectItem value="standard">Kamar Standar</SelectItem>
+                  <SelectItem value="deluxe">Kamar Deluxe</SelectItem>
                   <SelectItem value="suite">Suite</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2 sm:col-span-2 md:col-span-3 lg:col-span-4">
-              <h3 className="text-lg font-medium">Contact Information</h3>
+              <h3 className="text-lg font-medium">Informasi Kontak</h3>
             </div>
 
             <div className="space-y-2">
@@ -238,7 +238,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
               <Input
                 id="email"
                 type="email"
-                placeholder="Your email address"
+                placeholder="Alamat email Anda"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -246,10 +246,10 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="phone">Phone</Label>
+              <Label htmlFor="phone">Telepon</Label>
               <Input
                 id="phone"
-                placeholder="Your phone number"
+                placeholder="Nomor telepon Anda"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
@@ -257,7 +257,7 @@ export function BookingForm({ simplified = false }: BookingFormProps) {
 
             <div className="mt-6 sm:col-span-2 md:col-span-3 lg:col-span-4">
               <Button type="submit" className="w-full">
-                Complete Booking
+                Selesaikan Pemesanan
               </Button>
             </div>
           </>

@@ -47,46 +47,46 @@ export default function SettingsPage() {
         className="space-y-4"
       >
         <TabsList>
-          <TabsTrigger value="general">General</TabsTrigger>
-          <TabsTrigger value="homepage">Homepage Content</TabsTrigger>
-          <TabsTrigger value="contact">Contact Information</TabsTrigger>
-          <TabsTrigger value="accounts">Admin Accounts</TabsTrigger>
+          <TabsTrigger value="general">Umum</TabsTrigger>
+          <TabsTrigger value="homepage">Konten Beranda</TabsTrigger>
+          <TabsTrigger value="contact">Informasi Kontak</TabsTrigger>
+          <TabsTrigger value="accounts">Akun Admin</TabsTrigger>
         </TabsList>
 
         <TabsContent value="general" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Hotel Information</CardTitle>
+              <CardTitle>Informasi Hotel</CardTitle>
               <CardDescription>
-                Update your hotel's basic information displayed across the
-                website
+                Perbarui informasi dasar hotel Anda yang ditampilkan di seluruh
+                situs web
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="hotelName">Hotel Name</Label>
-                <Input id="hotelName" defaultValue="Luxury Hotel" />
+                <Label htmlFor="hotelName">Nama Hotel</Label>
+                <Input id="hotelName" defaultValue="Hotel Mewah" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="hotelTagline">Tagline</Label>
+                <Label htmlFor="hotelTagline">Slogan</Label>
                 <Input
                   id="hotelTagline"
-                  defaultValue="Experience Luxury & Comfort"
+                  defaultValue="Rasakan Kemewahan & Kenyamanan"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="hotelDescription">Short Description</Label>
+                <Label htmlFor="hotelDescription">Deskripsi Singkat</Label>
                 <Textarea
                   id="hotelDescription"
-                  defaultValue="Enjoy your stay in our premium hotel with world-class amenities and exceptional service"
+                  defaultValue="Nikmati masa inap Anda di hotel premium kami dengan fasilitas kelas dunia dan layanan yang luar biasa"
                   className="min-h-[100px]"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="hotelLogo">Hotel Logo</Label>
+                <Label htmlFor="hotelLogo">Logo Hotel</Label>
                 <div className="flex items-center gap-4">
                   <Avatar className="h-16 w-16">
-                    <AvatarImage src="/placeholder.svg" alt="Hotel Logo" />
+                    <AvatarImage src="/placeholder.svg" alt="Logo Hotel" />
                     <AvatarFallback>LH</AvatarFallback>
                   </Avatar>
                   <Input id="hotelLogo" type="file" />
@@ -96,24 +96,24 @@ export default function SettingsPage() {
             <CardFooter>
               <Button>
                 <Save className="mr-2 h-4 w-4" />
-                Save Changes
+                Simpan Perubahan
               </Button>
             </CardFooter>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Website Settings</CardTitle>
+              <CardTitle>Pengaturan Website</CardTitle>
               <CardDescription>
-                Configure general website settings and preferences
+                Konfigurasikan pengaturan dan preferensi umum situs web
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="currency">Currency</Label>
+                <Label htmlFor="currency">Mata Uang</Label>
                 <Select defaultValue="usd">
                   <SelectTrigger id="currency">
-                    <SelectValue placeholder="Select currency" />
+                    <SelectValue placeholder="Pilih mata uang" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="usd">USD ($)</SelectItem>
@@ -123,24 +123,24 @@ export default function SettingsPage() {
                 </Select>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="timezone">Timezone</Label>
+                <Label htmlFor="timezone">Zona Waktu</Label>
                 <Select defaultValue="est">
                   <SelectTrigger id="timezone">
-                    <SelectValue placeholder="Select timezone" />
+                    <SelectValue placeholder="Pilih zona waktu" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="est">Eastern Time (ET)</SelectItem>
-                    <SelectItem value="cst">Central Time (CT)</SelectItem>
-                    <SelectItem value="mst">Mountain Time (MT)</SelectItem>
-                    <SelectItem value="pst">Pacific Time (PT)</SelectItem>
+                    <SelectItem value="est">Waktu Timur (ET)</SelectItem>
+                    <SelectItem value="cst">Waktu Tengah (CT)</SelectItem>
+                    <SelectItem value="mst">Waktu Pegunungan (MT)</SelectItem>
+                    <SelectItem value="pst">Waktu Pasifik (PT)</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
-                  <Label htmlFor="maintenance">Maintenance Mode</Label>
+                  <Label htmlFor="maintenance">Mode Pemeliharaan</Label>
                   <p className="text-sm text-muted-foreground">
-                    Put the website in maintenance mode
+                    Aktifkan mode pemeliharaan untuk situs web
                   </p>
                 </div>
                 <Switch id="maintenance" />
@@ -148,9 +148,9 @@ export default function SettingsPage() {
               <Separator />
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
-                  <Label htmlFor="bookingEnabled">Online Booking</Label>
+                  <Label htmlFor="bookingEnabled">Pemesanan Online</Label>
                   <p className="text-sm text-muted-foreground">
-                    Enable online booking functionality
+                    Aktifkan fitur pemesanan online
                   </p>
                 </div>
                 <Switch id="bookingEnabled" defaultChecked />
@@ -159,7 +159,7 @@ export default function SettingsPage() {
             <CardFooter>
               <Button>
                 <Save className="mr-2 h-4 w-4" />
-                Save Changes
+                Simpan Perubahan
               </Button>
             </CardFooter>
           </Card>
@@ -168,33 +168,33 @@ export default function SettingsPage() {
         <TabsContent value="homepage" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Hero Section</CardTitle>
+              <CardTitle>Bagian Hero</CardTitle>
               <CardDescription>
-                Update the main hero section content on the homepage
+                Perbarui konten utama di bagian hero pada halaman depan
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="heroTitle">Hero Title</Label>
+                <Label htmlFor="heroTitle">Judul Hero</Label>
                 <Input
                   id="heroTitle"
-                  defaultValue="Experience Luxury & Comfort"
+                  defaultValue="Rasakan Kemewahan & Kenyamanan"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="heroSubtitle">Hero Subtitle</Label>
+                <Label htmlFor="heroSubtitle">Subjudul Hero</Label>
                 <Input
                   id="heroSubtitle"
-                  defaultValue="Enjoy your stay in our premium hotel with world-class amenities and exceptional service"
+                  defaultValue="Nikmati masa inap Anda di hotel premium kami dengan fasilitas kelas dunia dan layanan yang luar biasa"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="heroImage">Hero Background Image</Label>
+                <Label htmlFor="heroImage">Gambar Latar Hero</Label>
                 <div className="flex items-center gap-4">
                   <div className="relative h-20 w-32 overflow-hidden rounded-md border">
                     <img
                       src="/placeholder.svg"
-                      alt="Hero Background"
+                      alt="Latar Belakang Hero"
                       className="h-full w-full object-cover"
                     />
                   </div>
@@ -202,71 +202,69 @@ export default function SettingsPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="ctaText">Call to Action Button Text</Label>
-                <Input id="ctaText" defaultValue="Book Now" />
+                <Label htmlFor="ctaText">Teks Tombol Aksi</Label>
+                <Input id="ctaText" defaultValue="Pesan Sekarang" />
               </div>
             </CardContent>
             <CardFooter>
               <Button>
                 <Save className="mr-2 h-4 w-4" />
-                Save Changes
+                Simpan Perubahan
               </Button>
             </CardFooter>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Featured Sections</CardTitle>
+              <CardTitle>Bagian Unggulan</CardTitle>
               <CardDescription>
-                Manage the content for featured sections on the homepage
+                Kelola konten untuk bagian unggulan di halaman depan
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="aboutTitle">About Section Title</Label>
-                <Input id="aboutTitle" defaultValue="About Our Hotel" />
+                <Label htmlFor="aboutTitle">Judul Bagian Tentang</Label>
+                <Input id="aboutTitle" defaultValue="Tentang Hotel Kami" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="aboutContent">About Section Content</Label>
+                <Label htmlFor="aboutContent">Konten Bagian Tentang</Label>
                 <Textarea
                   id="aboutContent"
-                  defaultValue="Located in the heart of the city, our hotel offers the perfect blend of luxury, comfort, and convenience. With stunning views, elegant rooms, and exceptional service, we ensure that your stay with us is nothing short of extraordinary."
+                  defaultValue="Terletak di pusat kota, hotel kami menawarkan perpaduan sempurna antara kemewahan, kenyamanan, dan kemudahan. Dengan pemandangan menakjubkan, kamar elegan, dan layanan luar biasa, kami pastikan masa inap Anda bersama kami akan menjadi pengalaman yang tak terlupakan."
                   className="min-h-[100px]"
                 />
               </div>
               <Separator className="my-4" />
               <div className="space-y-2">
-                <Label htmlFor="facilitiesTitle">
-                  Facilities Section Title
-                </Label>
-                <Input id="facilitiesTitle" defaultValue="Our Facilities" />
+                <Label htmlFor="facilitiesTitle">Judul Bagian Fasilitas</Label>
+                <Input id="facilitiesTitle" defaultValue="Fasilitas Kami" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="facilitiesSubtitle">
-                  Facilities Section Subtitle
+                  Subjudul Bagian Fasilitas
                 </Label>
                 <Input
                   id="facilitiesSubtitle"
-                  defaultValue="Enjoy our premium facilities designed to make your stay comfortable and memorable"
+                  defaultValue="Nikmati fasilitas premium kami yang dirancang untuk membuat masa inap Anda nyaman dan berkesan"
                 />
               </div>
               <Separator className="my-4" />
               <div className="space-y-2">
-                <Label htmlFor="roomsTitle">Rooms Section Title</Label>
-                <Input id="roomsTitle" defaultValue="Our Rooms" />
+                <Label htmlFor="roomsTitle">Judul Bagian Kamar</Label>
+                <Input id="roomsTitle" defaultValue="Kamar Kami" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="roomsSubtitle">Rooms Section Subtitle</Label>
+                <Label htmlFor="roomsSubtitle">Subjudul Bagian Kamar</Label>
                 <Input
                   id="roomsSubtitle"
-                  defaultValue="Choose from our selection of comfortable and luxurious rooms"
+                  defaultValue="Pilih dari berbagai pilihan kamar kami yang nyaman dan mewah"
                 />
               </div>
             </CardContent>
             <CardFooter>
               <Button>
                 <Save className="mr-2 h-4 w-4" />
-                Save Changes
+                Simpan Perubahan
               </Button>
             </CardFooter>
           </Card>
@@ -275,41 +273,42 @@ export default function SettingsPage() {
         <TabsContent value="contact" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
+              <CardTitle>Informasi Kontak</CardTitle>
               <CardDescription>
-                Update your hotel's contact information displayed on the website
+                Perbarui informasi kontak hotel Anda yang ditampilkan di situs
+                web
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="address">Address</Label>
+                <Label htmlFor="address">Alamat</Label>
                 <Input
                   id="address"
-                  defaultValue="123 Luxury Avenue, City Center, Country"
+                  defaultValue="123 Luxury Avenue, City Center, Negara"
                 />
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
+                  <Label htmlFor="phone">Nomor Telepon</Label>
                   <Input id="phone" defaultValue="+1 (555) 123-4567" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email">Alamat Email</Label>
                   <Input id="email" defaultValue="info@luxuryhotel.com" />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="receptionHours">Reception Hours</Label>
+                <Label htmlFor="receptionHours">Jam Resepsionis</Label>
                 <Input
                   id="receptionHours"
-                  defaultValue="24/7, 365 days a year"
+                  defaultValue="24/7, 365 hari dalam setahun"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="mapEmbed">Google Maps Embed Code</Label>
+                <Label htmlFor="mapEmbed">Kode Sematan Google Maps</Label>
                 <Textarea
                   id="mapEmbed"
-                  placeholder="Paste Google Maps embed code here"
+                  placeholder="Tempelkan kode sematan Google Maps di sini"
                   className="min-h-[100px]"
                 />
               </div>
@@ -317,16 +316,16 @@ export default function SettingsPage() {
             <CardFooter>
               <Button>
                 <Save className="mr-2 h-4 w-4" />
-                Save Changes
+                Simpan Perubahan
               </Button>
             </CardFooter>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Social Media</CardTitle>
+              <CardTitle>Media Sosial</CardTitle>
               <CardDescription>
-                Add your hotel's social media links
+                Tambahkan tautan media sosial hotel Anda
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -362,7 +361,7 @@ export default function SettingsPage() {
             <CardFooter>
               <Button>
                 <Save className="mr-2 h-4 w-4" />
-                Save Changes
+                Simpan Perubahan
               </Button>
             </CardFooter>
           </Card>
@@ -371,9 +370,9 @@ export default function SettingsPage() {
         <TabsContent value="accounts" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Admin Accounts</CardTitle>
+              <CardTitle>Akun Admin</CardTitle>
               <CardDescription>
-                Manage administrator accounts for the hotel management system
+                Kelola akun administrator untuk sistem manajemen hotel
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -381,11 +380,11 @@ export default function SettingsPage() {
                 <table className="w-full">
                   <thead>
                     <tr className="border-b bg-muted/50">
-                      <th className="p-2 text-left font-medium">Name</th>
+                      <th className="p-2 text-left font-medium">Nama</th>
                       <th className="p-2 text-left font-medium">Email</th>
-                      <th className="p-2 text-left font-medium">Role</th>
+                      <th className="p-2 text-left font-medium">Peran</th>
                       <th className="p-2 text-left font-medium">Status</th>
-                      <th className="p-2 text-left font-medium">Actions</th>
+                      <th className="p-2 text-left font-medium">Tindakan</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -402,7 +401,7 @@ export default function SettingsPage() {
                       <td className="p-2">Super Admin</td>
                       <td className="p-2">
                         <span className="rounded-full bg-green-100 px-2 py-1 text-xs text-green-800">
-                          Active
+                          Aktif
                         </span>
                       </td>
                       <td className="p-2">
@@ -426,7 +425,7 @@ export default function SettingsPage() {
                       <td className="p-2">Manager</td>
                       <td className="p-2">
                         <span className="rounded-full bg-green-100 px-2 py-1 text-xs text-green-800">
-                          Active
+                          Aktif
                         </span>
                       </td>
                       <td className="p-2">
@@ -439,7 +438,7 @@ export default function SettingsPage() {
                             size="sm"
                             className="text-destructive"
                           >
-                            Delete
+                            Hapus
                           </Button>
                         </div>
                       </td>
@@ -457,7 +456,7 @@ export default function SettingsPage() {
                       <td className="p-2">Staff</td>
                       <td className="p-2">
                         <span className="rounded-full bg-yellow-100 px-2 py-1 text-xs text-yellow-800">
-                          Pending
+                          Menunggu
                         </span>
                       </td>
                       <td className="p-2">
@@ -470,7 +469,7 @@ export default function SettingsPage() {
                             size="sm"
                             className="text-destructive"
                           >
-                            Delete
+                            Hapus
                           </Button>
                         </div>
                       </td>
@@ -480,16 +479,16 @@ export default function SettingsPage() {
               </div>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button variant="outline">Export Users</Button>
-              <Button>Add New Admin</Button>
+              <Button variant="outline">Ekspor Pengguna</Button>
+              <Button>Tambah Admin Baru</Button>
             </CardFooter>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Your Account</CardTitle>
+              <CardTitle>Akun Anda</CardTitle>
               <CardDescription>
-                Update your account information and password
+                Perbarui informasi akun dan kata sandi Anda
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -507,16 +506,18 @@ export default function SettingsPage() {
               <Separator />
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="currentPassword">Current Password</Label>
+                  <Label htmlFor="currentPassword">Kata Sandi Saat Ini</Label>
                   <Input id="currentPassword" type="password" />
                 </div>
                 <div></div>
                 <div className="space-y-2">
-                  <Label htmlFor="newPassword">New Password</Label>
+                  <Label htmlFor="newPassword">Kata Sandi Baru</Label>
                   <Input id="newPassword" type="password" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="confirmPassword">Confirm New Password</Label>
+                  <Label htmlFor="confirmPassword">
+                    Konfirmasi Kata Sandi Baru
+                  </Label>
                   <Input id="confirmPassword" type="password" />
                 </div>
               </div>
@@ -524,7 +525,7 @@ export default function SettingsPage() {
             <CardFooter>
               <Button>
                 <Save className="mr-2 h-4 w-4" />
-                Update Password
+                Perbarui Kata Sandi
               </Button>
             </CardFooter>
           </Card>

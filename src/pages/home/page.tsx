@@ -27,6 +27,7 @@ import foto4 from "../../images/4.jpg";
 import foto9 from "../../images/9.jpg";
 import foto2 from "../../images/2.jpg";
 import foto3 from "../../images/3.jpg";
+import image8 from "../../images/8.jpg";
 import foto10 from "../../images/10.jpg";
 
 const features = [
@@ -126,7 +127,7 @@ export default function HomePage() {
               </div>
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <img
-                  src={"public/images/8.jpg"}
+                  src={image8}
                   alt="Hotel Interior"
                   className="object-cover"
                 />

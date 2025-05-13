@@ -57,9 +57,9 @@ export default function AdminLoginPage() {
 
         <Card className="border-2">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl text-center">Admin Login</CardTitle>
+            <CardTitle className="text-2xl text-center">Login Admin</CardTitle>
             <CardDescription className="text-center">
-              Enter your credentials to access the admin dashboard
+              Masukkan kredensial Anda untuk mengakses dasbor admin
             </CardDescription>
           </CardHeader>
           <form onSubmit={handleLogin}>
@@ -69,16 +69,16 @@ export default function AdminLoginPage() {
                 className="bg-destructive/10 text-destructive border-destructive/20"
               >
                 <ShieldAlert className="h-4 w-4" />
-                <AlertTitle>Restricted Area</AlertTitle>
+                <AlertTitle>Area Terbatas</AlertTitle>
                 <AlertDescription>
-                  This area is restricted to authorized personnel only.
-                  Unauthorized access attempts may be logged and reported.
+                  Area ini hanya diperuntukkan bagi personel yang berwenang.
+                  Percobaan akses tanpa izin dapat dicatat dan dilaporkan.
                 </AlertDescription>
               </Alert>
 
               {error && (
                 <Alert variant="destructive">
-                  <AlertTitle>Authentication Error</AlertTitle>
+                  <AlertTitle>Kesalahan Autentikasi</AlertTitle>
                   <AlertDescription>{error}</AlertDescription>
                 </Alert>
               )}
@@ -96,12 +96,12 @@ export default function AdminLoginPage() {
               </div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">Kata Sandi</Label>
                   <Link
                     to="/admin/forgot-password"
                     className="text-xs text-muted-foreground hover:text-primary"
                   >
-                    Forgot password?
+                    Lupa kata sandi?
                   </Link>
                 </div>
                 <div className="relative">
@@ -126,7 +126,9 @@ export default function AdminLoginPage() {
                       <Eye className="h-4 w-4 text-muted-foreground" />
                     )}
                     <span className="sr-only">
-                      {showPassword ? "Hide password" : "Show password"}
+                      {showPassword
+                        ? "Sembunyikan kata sandi"
+                        : "Tampilkan kata sandi"}
                     </span>
                   </Button>
                 </div>
@@ -137,14 +139,14 @@ export default function AdminLoginPage() {
                   htmlFor="remember"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Remember me
+                  Ingat saya
                 </label>
               </div>
             </CardContent>
             <CardFooter>
               <Button type="submit" className="w-full">
                 <LogIn className="mr-2 h-4 w-4" />
-                Login to Admin Panel
+                Masuk ke Panel Admin
               </Button>
             </CardFooter>
           </form>
@@ -155,16 +157,16 @@ export default function AdminLoginPage() {
             to="/"
             className="text-sm text-muted-foreground hover:text-primary"
           >
-            ← Return to Hotel Website
+            ← Kembali ke Situs Hotel
           </Link>
         </div>
 
-        {/* For demonstration purposes only - would not be included in a real application */}
-        <div className="mt-6 rounded-md bg-muted p-4 text-sm">
-          <p className="font-medium">Demo Credentials:</p>
+        {/* Untuk keperluan demonstrasi saja - tidak akan disertakan dalam aplikasi nyata */}
+        {/* <div className="mt-6 rounded-md bg-muted p-4 text-sm">
+          <p className="font-medium">Kredensial Demo:</p>
           <p>Email: admin@luxuryhotel.com</p>
-          <p>Password: admin123</p>
-        </div>
+          <p>Kata Sandi: admin123</p>
+        </div> */}
       </div>
     </div>
   );

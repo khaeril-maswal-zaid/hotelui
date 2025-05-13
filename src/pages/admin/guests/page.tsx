@@ -152,23 +152,21 @@ export default function GuestsPage() {
     <AdminLayout>
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">
-            Guest Management
-          </h1>
+          <h1 className="text-3xl font-bold tracking-tight">Manajemen Tamu</h1>
           <p className="text-muted-foreground">
-            View and manage guest information and history
+            Lihat dan kelola informasi serta riwayat tamu
           </p>
         </div>
         <Button>
           <User className="mr-2 h-4 w-4" />
-          Add New Guest
+          Tambah Tamu Baru
         </Button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Guests</CardTitle>
+            <CardTitle className="text-sm font-medium">Total Tamu</CardTitle>
             <User className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -177,7 +175,7 @@ export default function GuestsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">VIP Guests</CardTitle>
+            <CardTitle className="text-sm font-medium">Tamu VIP</CardTitle>
             <div className="h-2 w-2 rounded-full bg-yellow-500" />
           </CardHeader>
           <CardContent>
@@ -188,9 +186,7 @@ export default function GuestsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Regular Guests
-            </CardTitle>
+            <CardTitle className="text-sm font-medium">Tamu Reguler</CardTitle>
             <div className="h-2 w-2 rounded-full bg-green-500" />
           </CardHeader>
           <CardContent>
@@ -201,7 +197,7 @@ export default function GuestsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">New Guests</CardTitle>
+            <CardTitle className="text-sm font-medium">Tamu Baru</CardTitle>
             <div className="h-2 w-2 rounded-full bg-blue-500" />
           </CardHeader>
           <CardContent>
@@ -214,9 +210,9 @@ export default function GuestsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Guest Directory</CardTitle>
+          <CardTitle>Direktori Tamu</CardTitle>
           <CardDescription>
-            View and manage all guests who have stayed at the hotel
+            Lihat dan kelola semua tamu yang pernah menginap di hotel
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -225,7 +221,7 @@ export default function GuestsPage() {
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Search guests..."
+                placeholder="Cari tamu..."
                 className="pl-8"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -235,23 +231,23 @@ export default function GuestsPage() {
 
           <Tabs defaultValue="all" onValueChange={setSelectedTab}>
             <TabsList className="mb-4">
-              <TabsTrigger value="all">All Guests</TabsTrigger>
+              <TabsTrigger value="all">Semua Tamu</TabsTrigger>
               <TabsTrigger value="vip">VIP</TabsTrigger>
-              <TabsTrigger value="regular">Regular</TabsTrigger>
-              <TabsTrigger value="new">New</TabsTrigger>
+              <TabsTrigger value="regular">Reguler</TabsTrigger>
+              <TabsTrigger value="new">Baru</TabsTrigger>
             </TabsList>
 
             <div className="rounded-md border">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Guest</TableHead>
-                    <TableHead>Contact</TableHead>
-                    <TableHead>Visits</TableHead>
-                    <TableHead>Last Stay</TableHead>
-                    <TableHead>Total Spent</TableHead>
+                    <TableHead>Tamu</TableHead>
+                    <TableHead>Kontak</TableHead>
+                    <TableHead>Kunjungan</TableHead>
+                    <TableHead>Terakhir Menginap</TableHead>
+                    <TableHead>Total Pengeluaran</TableHead>
                     <TableHead>Status</TableHead>
-                    <TableHead className="text-right">Actions</TableHead>
+                    <TableHead className="text-right">Aksi</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -341,13 +337,13 @@ function GuestActions({ guest }: { guest: (typeof guests)[0] }) {
         <Dialog>
           <DialogTrigger asChild>
             <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-              View Details
+              Lihat Detail
             </DropdownMenuItem>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[600px]">
             <DialogHeader>
-              <DialogTitle>Guest Details</DialogTitle>
-              <DialogDescription>Guest ID: {guest.id}</DialogDescription>
+              <DialogTitle>Detail Tamu</DialogTitle>
+              <DialogDescription>ID Tamu: {guest.id}</DialogDescription>
             </DialogHeader>
             <div className="grid gap-6 py-4">
               <div className="flex items-center gap-4">
@@ -373,48 +369,48 @@ function GuestActions({ guest }: { guest: (typeof guests)[0] }) {
                   <div className="font-medium">{guest.email}</div>
                 </div>
                 <div>
-                  <Label>Phone</Label>
+                  <Label>Telepon</Label>
                   <div className="font-medium">{guest.phone}</div>
                 </div>
               </div>
 
               <div>
-                <Label>Address</Label>
+                <Label>Alamat</Label>
                 <div className="font-medium">{guest.address}</div>
               </div>
 
               <div className="grid grid-cols-3 gap-4">
                 <div>
-                  <Label>Visits</Label>
+                  <Label>Kunjungan</Label>
                   <div className="font-medium">{guest.visits}</div>
                 </div>
                 <div>
-                  <Label>Last Stay</Label>
+                  <Label>Menginap Terakhir</Label>
                   <div className="font-medium">{guest.lastStay}</div>
                 </div>
                 <div>
-                  <Label>Total Spent</Label>
+                  <Label>Total Pengeluaran</Label>
                   <div className="font-medium">${guest.totalSpent}</div>
                 </div>
               </div>
 
               <div>
-                <Label>Notes</Label>
+                <Label>Catatan</Label>
                 <div className="rounded-md border p-3 text-sm">
                   {guest.notes}
                 </div>
               </div>
 
               <div>
-                <Label>Stay History</Label>
+                <Label>Riwayat Menginap</Label>
                 <div className="mt-2 rounded-md border">
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Date</TableHead>
-                        <TableHead>Room</TableHead>
-                        <TableHead>Nights</TableHead>
-                        <TableHead>Amount</TableHead>
+                        <TableHead>Tanggal</TableHead>
+                        <TableHead>Kamar</TableHead>
+                        <TableHead>Malam</TableHead>
+                        <TableHead>Jumlah</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>

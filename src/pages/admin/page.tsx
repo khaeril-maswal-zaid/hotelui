@@ -32,9 +32,9 @@ export default function AdminDashboard() {
   return (
     <AdminLayout>
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Dasbor</h1>
         <p className="text-muted-foreground">
-          Overview of your hotel's performance and current status
+          Gambaran umum kinerja dan status hotel Anda saat ini
         </p>
       </div>
 
@@ -42,85 +42,89 @@ export default function AdminDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              Current Reservations
+              Reservasi Saat Ini
             </CardTitle>
             <CalendarClock className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">24</div>
-            <p className="text-xs text-muted-foreground">+5% from last week</p>
+            <p className="text-xs text-muted-foreground">
+              +5% dari minggu lalu
+            </p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              Available Rooms
+              Kamar Tersedia
             </CardTitle>
             <BedDouble className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">12</div>
-            <p className="text-xs text-muted-foreground">75% occupancy rate</p>
+            <p className="text-xs text-muted-foreground">
+              Tingkat okupansi 75%
+            </p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Current Guests
-            </CardTitle>
+            <CardTitle className="text-sm font-medium">Tamu Saat Ini</CardTitle>
             <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">42</div>
-            <p className="text-xs text-muted-foreground">+12% from last week</p>
+            <p className="text-xs text-muted-foreground">
+              +12% dari minggu lalu
+            </p>
           </CardContent>
         </Card>
       </div>
 
       <Tabs defaultValue="today" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="today">Today</TabsTrigger>
-          <TabsTrigger value="week">This Week</TabsTrigger>
-          <TabsTrigger value="month">This Month</TabsTrigger>
+          <TabsTrigger value="today">Hari Ini</TabsTrigger>
+          <TabsTrigger value="week">Minggu Ini</TabsTrigger>
+          <TabsTrigger value="month">Bulan Ini</TabsTrigger>
         </TabsList>
         <TabsContent value="today" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Recent Reservations</CardTitle>
+              <CardTitle>Reservasi Terbaru</CardTitle>
               <CardDescription>
-                Today's new reservations and check-ins
+                Reservasi dan check-in baru hari ini
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
                 <div className="grid grid-cols-4 text-sm font-medium text-muted-foreground">
-                  <div>Guest</div>
-                  <div>Room</div>
+                  <div>Tamu</div>
+                  <div>Kamar</div>
                   <div>Check-in</div>
                   <div>Status</div>
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4 rounded-lg border p-4">
                   <div className="font-medium">John Smith</div>
-                  <div>Deluxe Room</div>
-                  <div>Today, 2:00 PM</div>
+                  <div>Kamar Deluxe</div>
+                  <div>Hari Ini, 14.00</div>
                   <div className="rounded-full bg-yellow-100 px-2 py-1 text-xs text-yellow-800">
-                    Pending
+                    Menunggu
                   </div>
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4 rounded-lg border p-4">
                   <div className="font-medium">Sarah Johnson</div>
                   <div>Suite</div>
-                  <div>Today, 3:30 PM</div>
+                  <div>Hari Ini, 15.30</div>
                   <div className="rounded-full bg-green-100 px-2 py-1 text-xs text-green-800">
-                    Confirmed
+                    Dikonfirmasi
                   </div>
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4 rounded-lg border p-4">
                   <div className="font-medium">Michael Brown</div>
-                  <div>Standard Room</div>
-                  <div>Today, 1:00 PM</div>
+                  <div>Kamar Standar</div>
+                  <div>Hari Ini, 13.00</div>
                   <div className="rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-800">
-                    Checked In
+                    Telah Check-in
                   </div>
                 </div>
               </div>
@@ -130,12 +134,12 @@ export default function AdminDashboard() {
         <TabsContent value="week" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Weekly Overview</CardTitle>
-              <CardDescription>Reservations for this week</CardDescription>
+              <CardTitle>Ikhtisar Mingguan</CardTitle>
+              <CardDescription>Reservasi untuk minggu ini</CardDescription>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Weekly data will appear here
+                Data mingguan akan ditampilkan di sini
               </p>
             </CardContent>
           </Card>
@@ -143,12 +147,12 @@ export default function AdminDashboard() {
         <TabsContent value="month" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Monthly Overview</CardTitle>
-              <CardDescription>Reservations for this month</CardDescription>
+              <CardTitle>Ikhtisar Bulanan</CardTitle>
+              <CardDescription>Reservasi untuk bulan ini</CardDescription>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Monthly data will appear here
+                Data bulanan akan ditampilkan di sini
               </p>
             </CardContent>
           </Card>

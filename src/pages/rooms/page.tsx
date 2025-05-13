@@ -13,6 +13,10 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MainLayout from "@/components/layout/main-layout";
 
+import foto9 from "../../images/9.jpg";
+import foto2 from "../../images/2.jpg";
+import foto3 from "../../images/3.jpg";
+
 const roomTypes = [
   {
     id: "standard",
@@ -30,11 +34,7 @@ const roomTypes = [
       "Private Bathroom",
       "Daily Housekeeping",
     ],
-    images: [
-      "public/images/2.jpg",
-      "public/images/3.jpg",
-      "public/images/9.jpg",
-    ],
+    images: [foto2],
   },
   {
     id: "deluxe",
@@ -54,11 +54,7 @@ const roomTypes = [
       "Bathrobe & Slippers",
       "Daily Housekeeping",
     ],
-    images: [
-      "public/images/3.jpg",
-      "public/images/2.jpg",
-      "public/images/9.jpg",
-    ],
+    images: [foto3],
   },
   {
     id: "suite",
@@ -80,11 +76,7 @@ const roomTypes = [
       "Turn-down Service",
       "Executive Lounge Access",
     ],
-    images: [
-      "public/images/9.jpg",
-      "public/images/3.jpg",
-      "public/images/2.jpg",
-    ],
+    images: [foto9],
   },
 ];
 
@@ -94,19 +86,19 @@ export default function RoomsPage() {
       <div className="container mx-auto py-10 md:py-16">
         <div className="text-center">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Our Rooms
+            Kamar Kami
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Choose from our selection of comfortable and luxurious rooms
-            designed to make your stay memorable
+            Pilih dari berbagai pilihan kamar kami yang nyaman dan mewah,
+            dirancang untuk membuat masa inap Anda tak terlupakan
           </p>
         </div>
 
         <Tabs defaultValue="all" className="mt-10">
           <div className="flex justify-center">
             <TabsList>
-              <TabsTrigger value="all">All Rooms</TabsTrigger>
-              <TabsTrigger value="standard">Standard</TabsTrigger>
+              <TabsTrigger value="all">Semua Kamar</TabsTrigger>
+              <TabsTrigger value="standard">Standar</TabsTrigger>
               <TabsTrigger value="deluxe">Deluxe</TabsTrigger>
               <TabsTrigger value="suite">Suite</TabsTrigger>
             </TabsList>
@@ -138,7 +130,7 @@ function RoomCard({ room }: { room: (typeof roomTypes)[0] }) {
     <Card className="overflow-hidden">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
-          src={room.images[0] || "/placeholder.svg"}
+          src={room.images || "/placeholder.svg"}
           alt={room.name}
           className="object-cover transition-transform hover:scale-105"
         />

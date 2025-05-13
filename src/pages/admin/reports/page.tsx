@@ -62,9 +62,9 @@ export default function ReportsPage() {
     <AdminLayout>
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Reports</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Laporan</h1>
           <p className="text-muted-foreground">
-            View and export hotel performance reports
+            Lihat dan ekspor laporan kinerja hotel
           </p>
         </div>
         <div className="flex gap-2">
@@ -91,23 +91,23 @@ export default function ReportsPage() {
             <DropdownMenuTrigger asChild>
               <Button>
                 <Download className="mr-2 h-4 w-4" />
-                Export
+                Ekspor
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Export Options</DropdownMenuLabel>
+              <DropdownMenuLabel>Opsi Ekspor</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <FileText className="mr-2 h-4 w-4" />
-                Export as PDF
+                Ekspor sebagai PDF
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <FileText className="mr-2 h-4 w-4" />
-                Export as Excel
+                Ekspor sebagai Excel
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <Printer className="mr-2 h-4 w-4" />
-                Print Report
+                Cetak Laporan
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -118,37 +118,37 @@ export default function ReportsPage() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              Occupancy Rate
+              Tingkat Hunian
             </CardTitle>
             <BarChart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">78%</div>
-            <p className="text-xs text-muted-foreground">+5% from last month</p>
+            <p className="text-xs text-muted-foreground">+5% dari bulan lalu</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Revenue</CardTitle>
+            <CardTitle className="text-sm font-medium">Pendapatan</CardTitle>
             <LineChart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">$24,780</div>
             <p className="text-xs text-muted-foreground">
-              +12% from last month
+              +12% dari bulan lalu
             </p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              Average Daily Rate
+              Tarif Harian Rata-rata
             </CardTitle>
             <PieChart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">$165</div>
-            <p className="text-xs text-muted-foreground">+3% from last month</p>
+            <p className="text-xs text-muted-foreground">+3% dari bulan lalu</p>
           </CardContent>
         </Card>
       </div>
@@ -157,31 +157,33 @@ export default function ReportsPage() {
         <CardHeader>
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <CardTitle>Hotel Performance Reports</CardTitle>
+              <CardTitle className="pb-2">Laporan Kinerja Hotel</CardTitle>
               <CardDescription>
-                View detailed reports on hotel performance metrics
+                Lihat laporan terperinci tentang metrik kinerja hotel
               </CardDescription>
             </div>
             <div className="flex gap-2">
               <Select value={reportType} onValueChange={setReportType}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Report Type" />
+                  <SelectValue placeholder="Jenis Laporan" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="occupancy">Occupancy Report</SelectItem>
-                  <SelectItem value="revenue">Revenue Report</SelectItem>
-                  <SelectItem value="guests">Guest Statistics</SelectItem>
+                  <SelectItem value="occupancy">
+                    Laporan Tingkat Hunian
+                  </SelectItem>
+                  <SelectItem value="revenue">Laporan Pendapatan</SelectItem>
+                  <SelectItem value="guests">Statistik Tamu</SelectItem>
                 </SelectContent>
               </Select>
               <Select value={reportPeriod} onValueChange={setReportPeriod}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Time Period" />
+                  <SelectValue placeholder="Periode Waktu" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="daily">Daily</SelectItem>
-                  <SelectItem value="weekly">Weekly</SelectItem>
-                  <SelectItem value="monthly">Monthly</SelectItem>
-                  <SelectItem value="yearly">Yearly</SelectItem>
+                  <SelectItem value="daily">Harian</SelectItem>
+                  <SelectItem value="weekly">Mingguan</SelectItem>
+                  <SelectItem value="monthly">Bulanan</SelectItem>
+                  <SelectItem value="yearly">Tahunan</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -190,8 +192,8 @@ export default function ReportsPage() {
         <CardContent>
           <Tabs defaultValue="table">
             <TabsList className="mb-4">
-              <TabsTrigger value="table">Table View</TabsTrigger>
-              <TabsTrigger value="chart">Chart View</TabsTrigger>
+              <TabsTrigger value="table">Tampilan Tabel</TabsTrigger>
+              <TabsTrigger value="chart">Tampilan Grafik</TabsTrigger>
             </TabsList>
 
             <TabsContent value="table">
@@ -211,10 +213,10 @@ export default function ReportsPage() {
                 <div className="text-center">
                   <LineChart className="mx-auto h-10 w-10 text-muted-foreground" />
                   <h3 className="mt-2 text-lg font-medium">
-                    Chart Visualization
+                    Visualisasi Grafik
                   </h3>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Chart visualization would be displayed here
+                    Visualisasi grafik akan ditampilkan di sini
                   </p>
                 </div>
               </div>
@@ -222,8 +224,8 @@ export default function ReportsPage() {
           </Tabs>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline">Previous Period</Button>
-          <Button variant="outline">Next Period</Button>
+          <Button variant="outline">Periode Sebelumnya</Button>
+          <Button variant="outline">Periode Berikutnya</Button>
         </CardFooter>
       </Card>
     </AdminLayout>
@@ -238,54 +240,54 @@ function OccupancyReport({ period }: { period: string }) {
           <TableRow>
             <TableHead>
               {period === "daily"
-                ? "Date"
+                ? "Tanggal"
                 : period === "weekly"
-                ? "Week"
-                : "Month"}
+                ? "Minggu"
+                : "Bulan"}
             </TableHead>
-            <TableHead>Total Rooms</TableHead>
-            <TableHead>Occupied Rooms</TableHead>
-            <TableHead>Available Rooms</TableHead>
-            <TableHead>Occupancy Rate</TableHead>
+            <TableHead>Pendapatan Kamar</TableHead>
+            <TableHead>Pendapatan F&B</TableHead>
+            <TableHead>Pendapatan Lainnya</TableHead>
+            <TableHead>Total Pendapatan</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {period === "daily" && (
             <>
               <TableRow>
-                <TableCell>May 1, 2023</TableCell>
-                <TableCell>30</TableCell>
-                <TableCell>24</TableCell>
-                <TableCell>6</TableCell>
-                <TableCell>80%</TableCell>
+                <TableCell>1 Mei 2023</TableCell>
+                <TableCell>$3,600</TableCell>
+                <TableCell>$1,200</TableCell>
+                <TableCell>$450</TableCell>
+                <TableCell>$5,250</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 2, 2023</TableCell>
-                <TableCell>30</TableCell>
-                <TableCell>26</TableCell>
-                <TableCell>4</TableCell>
-                <TableCell>87%</TableCell>
+                <TableCell>2 Mei 2023</TableCell>
+                <TableCell>$3,900</TableCell>
+                <TableCell>$1,350</TableCell>
+                <TableCell>$500</TableCell>
+                <TableCell>$5,750</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 3, 2023</TableCell>
-                <TableCell>30</TableCell>
-                <TableCell>22</TableCell>
-                <TableCell>8</TableCell>
-                <TableCell>73%</TableCell>
+                <TableCell>3 Mei 2023</TableCell>
+                <TableCell>$3,300</TableCell>
+                <TableCell>$1,100</TableCell>
+                <TableCell>$400</TableCell>
+                <TableCell>$4,800</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 4, 2023</TableCell>
-                <TableCell>30</TableCell>
-                <TableCell>25</TableCell>
-                <TableCell>5</TableCell>
-                <TableCell>83%</TableCell>
+                <TableCell>4 Mei 2023</TableCell>
+                <TableCell>$3,750</TableCell>
+                <TableCell>$1,250</TableCell>
+                <TableCell>$480</TableCell>
+                <TableCell>$5,480</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 5, 2023</TableCell>
-                <TableCell>30</TableCell>
-                <TableCell>28</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>93%</TableCell>
+                <TableCell>5 Mei 2023</TableCell>
+                <TableCell>$4,200</TableCell>
+                <TableCell>$1,500</TableCell>
+                <TableCell>$550</TableCell>
+                <TableCell>$6,250</TableCell>
               </TableRow>
             </>
           )}
@@ -293,32 +295,32 @@ function OccupancyReport({ period }: { period: string }) {
           {period === "weekly" && (
             <>
               <TableRow>
-                <TableCell>Week 1 (May 1-7)</TableCell>
-                <TableCell>210</TableCell>
-                <TableCell>175</TableCell>
-                <TableCell>35</TableCell>
-                <TableCell>83%</TableCell>
+                <TableCell>Minggu 1 (1-7 Mei)</TableCell>
+                <TableCell>$26,250</TableCell>
+                <TableCell>$8,750</TableCell>
+                <TableCell>$3,200</TableCell>
+                <TableCell>$38,200</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 2 (May 8-14)</TableCell>
-                <TableCell>210</TableCell>
-                <TableCell>168</TableCell>
-                <TableCell>42</TableCell>
-                <TableCell>80%</TableCell>
+                <TableCell>Minggu 2 (8-14 Mei)</TableCell>
+                <TableCell>$25,200</TableCell>
+                <TableCell>$8,400</TableCell>
+                <TableCell>$3,100</TableCell>
+                <TableCell>$36,700</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 3 (May 15-21)</TableCell>
-                <TableCell>210</TableCell>
-                <TableCell>180</TableCell>
-                <TableCell>30</TableCell>
-                <TableCell>86%</TableCell>
+                <TableCell>Minggu 3 (15-21 Mei)</TableCell>
+                <TableCell>$27,000</TableCell>
+                <TableCell>$9,000</TableCell>
+                <TableCell>$3,300</TableCell>
+                <TableCell>$39,300</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 4 (May 22-28)</TableCell>
-                <TableCell>210</TableCell>
-                <TableCell>190</TableCell>
-                <TableCell>20</TableCell>
-                <TableCell>90%</TableCell>
+                <TableCell>Minggu 4 (22-28 Mei)</TableCell>
+                <TableCell>$28,500</TableCell>
+                <TableCell>$9,500</TableCell>
+                <TableCell>$3,500</TableCell>
+                <TableCell>$41,500</TableCell>
               </TableRow>
             </>
           )}
@@ -326,39 +328,39 @@ function OccupancyReport({ period }: { period: string }) {
           {period === "monthly" && (
             <>
               <TableRow>
-                <TableCell>January 2023</TableCell>
-                <TableCell>930</TableCell>
-                <TableCell>698</TableCell>
-                <TableCell>232</TableCell>
-                <TableCell>75%</TableCell>
+                <TableCell>Januari 2023</TableCell>
+                <TableCell>$104,700</TableCell>
+                <TableCell>$34,900</TableCell>
+                <TableCell>$12,800</TableCell>
+                <TableCell>$152,400</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>February 2023</TableCell>
-                <TableCell>840</TableCell>
-                <TableCell>655</TableCell>
-                <TableCell>185</TableCell>
-                <TableCell>78%</TableCell>
+                <TableCell>Februari 2023</TableCell>
+                <TableCell>$98,250</TableCell>
+                <TableCell>$32,750</TableCell>
+                <TableCell>$12,000</TableCell>
+                <TableCell>$143,000</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>March 2023</TableCell>
-                <TableCell>930</TableCell>
-                <TableCell>744</TableCell>
-                <TableCell>186</TableCell>
-                <TableCell>80%</TableCell>
+                <TableCell>Maret 2023</TableCell>
+                <TableCell>$111,600</TableCell>
+                <TableCell>$37,200</TableCell>
+                <TableCell>$13,600</TableCell>
+                <TableCell>$162,400</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>April 2023</TableCell>
-                <TableCell>900</TableCell>
-                <TableCell>765</TableCell>
-                <TableCell>135</TableCell>
-                <TableCell>85%</TableCell>
+                <TableCell>$114,750</TableCell>
+                <TableCell>$38,250</TableCell>
+                <TableCell>$14,000</TableCell>
+                <TableCell>$167,000</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 2023</TableCell>
-                <TableCell>930</TableCell>
-                <TableCell>800</TableCell>
-                <TableCell>130</TableCell>
-                <TableCell>86%</TableCell>
+                <TableCell>Mei 2023</TableCell>
+                <TableCell>$120,000</TableCell>
+                <TableCell>$40,000</TableCell>
+                <TableCell>$14,700</TableCell>
+                <TableCell>$174,700</TableCell>
               </TableRow>
             </>
           )}
@@ -376,54 +378,54 @@ function RevenueReport({ period }: { period: string }) {
           <TableRow>
             <TableHead>
               {period === "daily"
-                ? "Date"
+                ? "Tanggal"
                 : period === "weekly"
-                ? "Week"
-                : "Month"}
+                ? "Minggu"
+                : "Bulan"}
             </TableHead>
-            <TableHead>Room Revenue</TableHead>
-            <TableHead>F&B Revenue</TableHead>
-            <TableHead>Other Revenue</TableHead>
-            <TableHead>Total Revenue</TableHead>
+            <TableHead>Total Kamar</TableHead>
+            <TableHead>Kamar Terisi</TableHead>
+            <TableHead>Kamar Tersedia</TableHead>
+            <TableHead>Tingkat Hunian</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {period === "daily" && (
             <>
               <TableRow>
-                <TableCell>May 1, 2023</TableCell>
-                <TableCell>$3,600</TableCell>
-                <TableCell>$1,200</TableCell>
-                <TableCell>$450</TableCell>
-                <TableCell>$5,250</TableCell>
+                <TableCell>1 Mei 2023</TableCell>
+                <TableCell>30</TableCell>
+                <TableCell>24</TableCell>
+                <TableCell>6</TableCell>
+                <TableCell>80%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 2, 2023</TableCell>
-                <TableCell>$3,900</TableCell>
-                <TableCell>$1,350</TableCell>
-                <TableCell>$500</TableCell>
-                <TableCell>$5,750</TableCell>
+                <TableCell>2 Mei 2023</TableCell>
+                <TableCell>30</TableCell>
+                <TableCell>26</TableCell>
+                <TableCell>4</TableCell>
+                <TableCell>87%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 3, 2023</TableCell>
-                <TableCell>$3,300</TableCell>
-                <TableCell>$1,100</TableCell>
-                <TableCell>$400</TableCell>
-                <TableCell>$4,800</TableCell>
+                <TableCell>3 Mei 2023</TableCell>
+                <TableCell>30</TableCell>
+                <TableCell>22</TableCell>
+                <TableCell>8</TableCell>
+                <TableCell>73%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 4, 2023</TableCell>
-                <TableCell>$3,750</TableCell>
-                <TableCell>$1,250</TableCell>
-                <TableCell>$480</TableCell>
-                <TableCell>$5,480</TableCell>
+                <TableCell>4 Mei 2023</TableCell>
+                <TableCell>30</TableCell>
+                <TableCell>25</TableCell>
+                <TableCell>5</TableCell>
+                <TableCell>83%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 5, 2023</TableCell>
-                <TableCell>$4,200</TableCell>
-                <TableCell>$1,500</TableCell>
-                <TableCell>$550</TableCell>
-                <TableCell>$6,250</TableCell>
+                <TableCell>5 Mei 2023</TableCell>
+                <TableCell>30</TableCell>
+                <TableCell>28</TableCell>
+                <TableCell>2</TableCell>
+                <TableCell>93%</TableCell>
               </TableRow>
             </>
           )}
@@ -431,32 +433,32 @@ function RevenueReport({ period }: { period: string }) {
           {period === "weekly" && (
             <>
               <TableRow>
-                <TableCell>Week 1 (May 1-7)</TableCell>
-                <TableCell>$26,250</TableCell>
-                <TableCell>$8,750</TableCell>
-                <TableCell>$3,200</TableCell>
-                <TableCell>$38,200</TableCell>
+                <TableCell>Minggu 1 (1-7 Mei)</TableCell>
+                <TableCell>210</TableCell>
+                <TableCell>175</TableCell>
+                <TableCell>35</TableCell>
+                <TableCell>83%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 2 (May 8-14)</TableCell>
-                <TableCell>$25,200</TableCell>
-                <TableCell>$8,400</TableCell>
-                <TableCell>$3,100</TableCell>
-                <TableCell>$36,700</TableCell>
+                <TableCell>Minggu 2 (8-14 Mei)</TableCell>
+                <TableCell>210</TableCell>
+                <TableCell>168</TableCell>
+                <TableCell>42</TableCell>
+                <TableCell>80%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 3 (May 15-21)</TableCell>
-                <TableCell>$27,000</TableCell>
-                <TableCell>$9,000</TableCell>
-                <TableCell>$3,300</TableCell>
-                <TableCell>$39,300</TableCell>
+                <TableCell>Minggu 3 (15-21 Mei)</TableCell>
+                <TableCell>210</TableCell>
+                <TableCell>180</TableCell>
+                <TableCell>30</TableCell>
+                <TableCell>86%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 4 (May 22-28)</TableCell>
-                <TableCell>$28,500</TableCell>
-                <TableCell>$9,500</TableCell>
-                <TableCell>$3,500</TableCell>
-                <TableCell>$41,500</TableCell>
+                <TableCell>Minggu 4 (22-28 Mei)</TableCell>
+                <TableCell>210</TableCell>
+                <TableCell>190</TableCell>
+                <TableCell>20</TableCell>
+                <TableCell>90%</TableCell>
               </TableRow>
             </>
           )}
@@ -464,39 +466,39 @@ function RevenueReport({ period }: { period: string }) {
           {period === "monthly" && (
             <>
               <TableRow>
-                <TableCell>January 2023</TableCell>
-                <TableCell>$104,700</TableCell>
-                <TableCell>$34,900</TableCell>
-                <TableCell>$12,800</TableCell>
-                <TableCell>$152,400</TableCell>
+                <TableCell>Januari 2023</TableCell>
+                <TableCell>930</TableCell>
+                <TableCell>698</TableCell>
+                <TableCell>232</TableCell>
+                <TableCell>75%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>February 2023</TableCell>
-                <TableCell>$98,250</TableCell>
-                <TableCell>$32,750</TableCell>
-                <TableCell>$12,000</TableCell>
-                <TableCell>$143,000</TableCell>
+                <TableCell>Februari 2023</TableCell>
+                <TableCell>840</TableCell>
+                <TableCell>655</TableCell>
+                <TableCell>185</TableCell>
+                <TableCell>78%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>March 2023</TableCell>
-                <TableCell>$111,600</TableCell>
-                <TableCell>$37,200</TableCell>
-                <TableCell>$13,600</TableCell>
-                <TableCell>$162,400</TableCell>
+                <TableCell>Maret 2023</TableCell>
+                <TableCell>930</TableCell>
+                <TableCell>744</TableCell>
+                <TableCell>186</TableCell>
+                <TableCell>80%</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>April 2023</TableCell>
-                <TableCell>$114,750</TableCell>
-                <TableCell>$38,250</TableCell>
-                <TableCell>$14,000</TableCell>
-                <TableCell>$167,000</TableCell>
+                <TableCell>900</TableCell>
+                <TableCell>765</TableCell>
+                <TableCell>135</TableCell>
+                <TableCell>85%</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 2023</TableCell>
-                <TableCell>$120,000</TableCell>
-                <TableCell>$40,000</TableCell>
-                <TableCell>$14,700</TableCell>
-                <TableCell>$174,700</TableCell>
+                <TableCell>Mei 2023</TableCell>
+                <TableCell>930</TableCell>
+                <TableCell>800</TableCell>
+                <TableCell>130</TableCell>
+                <TableCell>86%</TableCell>
               </TableRow>
             </>
           )}
@@ -514,54 +516,54 @@ function GuestReport({ period }: { period: string }) {
           <TableRow>
             <TableHead>
               {period === "daily"
-                ? "Date"
+                ? "Tanggal"
                 : period === "weekly"
-                ? "Week"
-                : "Month"}
+                ? "Minggu"
+                : "Bulan"}
             </TableHead>
-            <TableHead>New Guests</TableHead>
-            <TableHead>Returning Guests</TableHead>
-            <TableHead>Total Guests</TableHead>
-            <TableHead>Avg. Stay Duration</TableHead>
+            <TableHead>Tamu Baru</TableHead>
+            <TableHead>Tamu Kembali</TableHead>
+            <TableHead>Total Tamu</TableHead>
+            <TableHead>Rata-rata Durasi Menginap</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {period === "daily" && (
             <>
               <TableRow>
-                <TableCell>May 1, 2023</TableCell>
+                <TableCell>1 Mei 2023</TableCell>
                 <TableCell>8</TableCell>
                 <TableCell>16</TableCell>
                 <TableCell>24</TableCell>
-                <TableCell>2.5 days</TableCell>
+                <TableCell>2,5 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 2, 2023</TableCell>
+                <TableCell>2 Mei 2023</TableCell>
                 <TableCell>10</TableCell>
                 <TableCell>16</TableCell>
                 <TableCell>26</TableCell>
-                <TableCell>2.3 days</TableCell>
+                <TableCell>2,3 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 3, 2023</TableCell>
+                <TableCell>3 Mei 2023</TableCell>
                 <TableCell>6</TableCell>
                 <TableCell>16</TableCell>
                 <TableCell>22</TableCell>
-                <TableCell>2.7 days</TableCell>
+                <TableCell>2,7 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 4, 2023</TableCell>
+                <TableCell>4 Mei 2023</TableCell>
                 <TableCell>9</TableCell>
                 <TableCell>16</TableCell>
                 <TableCell>25</TableCell>
-                <TableCell>2.4 days</TableCell>
+                <TableCell>2,4 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 5, 2023</TableCell>
+                <TableCell>5 Mei 2023</TableCell>
                 <TableCell>12</TableCell>
                 <TableCell>16</TableCell>
                 <TableCell>28</TableCell>
-                <TableCell>2.2 days</TableCell>
+                <TableCell>2,2 hari</TableCell>
               </TableRow>
             </>
           )}
@@ -569,32 +571,32 @@ function GuestReport({ period }: { period: string }) {
           {period === "weekly" && (
             <>
               <TableRow>
-                <TableCell>Week 1 (May 1-7)</TableCell>
+                <TableCell>Minggu 1 (1-7 Mei)</TableCell>
                 <TableCell>45</TableCell>
                 <TableCell>130</TableCell>
                 <TableCell>175</TableCell>
-                <TableCell>2.4 days</TableCell>
+                <TableCell>2,4 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 2 (May 8-14)</TableCell>
+                <TableCell>Minggu 2 (8-14 Mei)</TableCell>
                 <TableCell>38</TableCell>
                 <TableCell>130</TableCell>
                 <TableCell>168</TableCell>
-                <TableCell>2.5 days</TableCell>
+                <TableCell>2,5 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 3 (May 15-21)</TableCell>
+                <TableCell>Minggu 3 (15-21 Mei)</TableCell>
                 <TableCell>50</TableCell>
                 <TableCell>130</TableCell>
                 <TableCell>180</TableCell>
-                <TableCell>2.3 days</TableCell>
+                <TableCell>2,3 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Week 4 (May 22-28)</TableCell>
+                <TableCell>Minggu 4 (22-28 Mei)</TableCell>
                 <TableCell>60</TableCell>
                 <TableCell>130</TableCell>
                 <TableCell>190</TableCell>
-                <TableCell>2.2 days</TableCell>
+                <TableCell>2,2 hari</TableCell>
               </TableRow>
             </>
           )}
@@ -602,39 +604,39 @@ function GuestReport({ period }: { period: string }) {
           {period === "monthly" && (
             <>
               <TableRow>
-                <TableCell>January 2023</TableCell>
+                <TableCell>Januari 2023</TableCell>
                 <TableCell>168</TableCell>
                 <TableCell>530</TableCell>
                 <TableCell>698</TableCell>
-                <TableCell>2.6 days</TableCell>
+                <TableCell>2,6 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>February 2023</TableCell>
+                <TableCell>Februari 2023</TableCell>
                 <TableCell>155</TableCell>
                 <TableCell>500</TableCell>
                 <TableCell>655</TableCell>
-                <TableCell>2.5 days</TableCell>
+                <TableCell>2,5 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>March 2023</TableCell>
+                <TableCell>Maret 2023</TableCell>
                 <TableCell>184</TableCell>
                 <TableCell>560</TableCell>
                 <TableCell>744</TableCell>
-                <TableCell>2.4 days</TableCell>
+                <TableCell>2,4 hari</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>April 2023</TableCell>
                 <TableCell>195</TableCell>
                 <TableCell>570</TableCell>
                 <TableCell>765</TableCell>
-                <TableCell>2.3 days</TableCell>
+                <TableCell>2,3 hari</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>May 2023</TableCell>
+                <TableCell>Mei 2023</TableCell>
                 <TableCell>210</TableCell>
                 <TableCell>590</TableCell>
                 <TableCell>800</TableCell>
-                <TableCell>2.4 days</TableCell>
+                <TableCell>2,4 hari</TableCell>
               </TableRow>
             </>
           )}
