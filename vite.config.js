@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+  homepage: "https://khaeril-maswal-zaid.github.io/hotelui",
   base: "/hotelui/",
   plugins: [react()],
   resolve: {

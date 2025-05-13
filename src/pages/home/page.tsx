@@ -27,23 +27,23 @@ import MainLayout from "@/components/layout/main-layout";
 const features = [
   {
     icon: Wifi,
-    title: "Free Wi-Fi",
-    description: "High-speed internet access throughout the hotel",
+    title: "Wi-Fi Gratis",
+    description: "Akses internet berkecepatan tinggi di seluruh area hotel",
   },
   {
     icon: Utensils,
-    title: "Restaurant",
-    description: "Fine dining experience with international cuisine",
+    title: "Restoran",
+    description: "Pengalaman bersantap mewah dengan hidangan internasional",
   },
   {
     icon: Coffee,
-    title: "Room Service",
-    description: "24/7 room service for your convenience",
+    title: "Layanan Kamar",
+    description: "Layanan kamar 24 jam untuk kenyamanan Anda",
   },
   {
     icon: BedDouble,
-    title: "Comfortable Rooms",
-    description: "Luxurious rooms with modern amenities",
+    title: "Kamar Nyaman",
+    description: "Kamar mewah dengan fasilitas modern",
   },
 ];
 
@@ -54,22 +54,22 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden h-[80vh] w-full">
           <img
-            src="public/images/4.jpg"
+            src="public/images/4.jpgx"
             alt="Luxury Hotel"
             className="object-cover w-full"
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-              Experience Luxury & Comfort
+              Rasakan Kemewahan & Kenyamanan
             </h1>
             <p className="mt-4 max-w-2xl text-lg sm:text-xl">
-              Enjoy your stay in our premium hotel with world-class amenities
-              and exceptional service
+              Nikmati masa menginap Anda di hotel premium kami dengan fasilitas
+              kelas dunia dan layanan yang luar biasa
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
-                <Link to="#booking-section">Book Now</Link>
+                <Link to="#booking-section">Pesan Sekarang</Link>
               </Button>
               <Button
                 size="lg"
@@ -77,7 +77,7 @@ export default function HomePage() {
                 className="bg-white/10 text-white hover:bg-white/20"
                 asChild
               >
-                <Link to="/rooms">Explore Rooms</Link>
+                <Link to="/rooms">Lihat Kamar</Link>
               </Button>
             </div>
           </div>
@@ -103,22 +103,24 @@ export default function HomePage() {
             <div className="grid gap-12 md:grid-cols-2 md:items-center">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                  About Our Hotel
+                  Tentang Hotel Kami
                 </h2>
                 <p className="mt-4 text-muted-foreground">
-                  Located in the heart of the city, our hotel offers the perfect
-                  blend of luxury, comfort, and convenience. With stunning
-                  views, elegant rooms, and exceptional service, we ensure that
-                  your stay with us is nothing short of extraordinary.
+                  Terletak di jantung kota, hotel kami menghadirkan perpaduan
+                  sempurna antara kemewahan, kenyamanan, dan kemudahan. Dengan
+                  pemandangan yang menakjubkan, kamar-kamar yang elegan, serta
+                  layanan yang luar biasa, kami pastikan setiap momen Anda
+                  bersama kami menjadi pengalaman yang tak terlupakan.
                 </p>
                 <p className="mt-4 text-muted-foreground">
-                  Whether you're traveling for business or leisure, our
-                  dedicated staff is committed to making your experience
-                  memorable. From the moment you arrive until your departure, we
-                  strive to exceed your expectations.
+                  Baik Anda bepergian untuk urusan bisnis maupun liburan, staf
+                  kami yang berdedikasi siap memberikan pelayanan terbaik untuk
+                  membuat masa menginap Anda semakin berkesan. Sejak Anda tiba
+                  hingga saat keberangkatan, kami berkomitmen untuk melampaui
+                  harapan Anda.
                 </p>
                 <Button className="mt-6" variant="outline" asChild>
-                  <Link to="/contact">Learn More</Link>
+                  <Link to="/contact">Selengkapnya</Link>
                 </Button>
               </div>
               <div className="relative aspect-video overflow-hidden rounded-lg">
@@ -137,11 +139,11 @@ export default function HomePage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Our Facilities
+                Fasilitas Kami
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                Enjoy our premium facilities designed to make your stay
-                comfortable and memorable
+                Nikmati berbagai fasilitas premium yang dirancang untuk membuat
+                masa menginap Anda nyaman dan tak terlupakan
               </p>
             </div>
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -167,95 +169,95 @@ export default function HomePage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Our Rooms
+                Kamar Kami
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                Choose from our selection of comfortable and luxurious rooms
+                Pilih dari beragam kamar kami yang nyaman dan mewah
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {/* Standard Room */}
-              <Card>
+              {/* Kamar Standard */}
+              <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src="public/images/2.jpg"
-                    alt="Standard Room"
+                    alt="Kamar Standard"
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Standard Room</CardTitle>
+                  <CardTitle>Kamar Standard</CardTitle>
                   <CardDescription>
-                    Perfect for solo travelers or couples
+                    Cocok untuk pelancong solo atau pasangan
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-2xl font-bold">
                     $100
                     <span className="text-sm font-normal text-muted-foreground">
-                      /night
+                      /malam
                     </span>
                   </p>
                   <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center">
                       <BedDouble className="mr-2 h-4 w-4" />
-                      Queen-sized bed
+                      Tempat tidur queen size
                     </li>
                     <li className="flex items-center">
                       <Wifi className="mr-2 h-4 w-4" />
-                      Free Wi-Fi
+                      Wi-Fi gratis
                     </li>
                   </ul>
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full" asChild>
-                    <Link to="/booking?room=standard">Book Now</Link>
+                    <Link to="/booking?room=standard">Pesan Sekarang</Link>
                   </Button>
                 </CardFooter>
               </Card>
 
-              {/* Deluxe Room */}
-              <Card>
+              {/* Kamar Deluxe */}
+              <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src="public/images/3.jpg"
-                    alt="Deluxe Room"
+                    alt="Kamar Deluxe"
                     className="object-cover transition-transform hover:scale-105"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>Deluxe Room</CardTitle>
+                  <CardTitle>Kamar Deluxe</CardTitle>
                   <CardDescription>
-                    Spacious room with premium amenities
+                    Kamar luas dengan fasilitas premium
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-2xl font-bold">
                     $150
                     <span className="text-sm font-normal text-muted-foreground">
-                      /night
+                      /malam
                     </span>
                   </p>
                   <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center">
                       <BedDouble className="mr-2 h-4 w-4" />
-                      King-sized bed
+                      Tempat tidur king size
                     </li>
                     <li className="flex items-center">
                       <Wifi className="mr-2 h-4 w-4" />
-                      Free Wi-Fi
+                      Wi-Fi gratis
                     </li>
                   </ul>
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full" asChild>
-                    <Link to="/booking?room=deluxe">Book Now</Link>
+                    <Link to="/booking?room=deluxe">Pesan Sekarang</Link>
                   </Button>
                 </CardFooter>
               </Card>
 
               {/* Suite */}
-              <Card>
+              <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src="public/images/9.jpg"
@@ -266,37 +268,37 @@ export default function HomePage() {
                 <CardHeader>
                   <CardTitle>Suite</CardTitle>
                   <CardDescription>
-                    Luxury suite with separate living area
+                    Suite mewah dengan ruang tamu terpisah
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-2xl font-bold">
                     $250
                     <span className="text-sm font-normal text-muted-foreground">
-                      /night
+                      /malam
                     </span>
                   </p>
                   <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center">
                       <BedDouble className="mr-2 h-4 w-4" />
-                      King-sized bed
+                      Tempat tidur king size
                     </li>
                     <li className="flex items-center">
                       <Wifi className="mr-2 h-4 w-4" />
-                      Free Wi-Fi
+                      Wi-Fi gratis
                     </li>
                   </ul>
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full" asChild>
-                    <Link to="/booking?room=suite">Book Now</Link>
+                    <Link to="/booking?room=suite">Pesan Sekarang</Link>
                   </Button>
                 </CardFooter>
               </Card>
             </div>
             <div className="mt-12 text-center">
               <Button variant="outline" size="lg" asChild>
-                <Link to="/rooms">View All Rooms</Link>
+                <Link to="/rooms">Lihat Semua Kamar</Link>
               </Button>
             </div>
           </div>
@@ -308,20 +310,20 @@ export default function HomePage() {
             <div className="grid gap-12 md:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                  Contact Us
+                  Hubungi Kami
                 </h2>
                 <p className="mt-4 text-muted-foreground">
-                  Have questions or need assistance? Our team is here to help
-                  you with any inquiries.
+                  Punya pertanyaan atau butuh bantuan? Tim kami siap membantu
+                  Anda dengan segala pertanyaan.
                 </p>
 
                 <div className="mt-8 space-y-4">
                   <div className="flex items-start">
                     <MapPin className="mr-3 h-5 w-5 text-primary" />
                     <div>
-                      <h3 className="font-medium">Address</h3>
+                      <h3 className="font-medium">Alamat</h3>
                       <p className="text-muted-foreground">
-                        123 Luxury Avenue, City Center, Country
+                        123 Luxury Avenue, Pusat Kota, Negara
                       </p>
                     </div>
                   </div>
@@ -329,7 +331,7 @@ export default function HomePage() {
                   <div className="flex items-start">
                     <Phone className="mr-3 h-5 w-5 text-primary" />
                     <div>
-                      <h3 className="font-medium">Phone</h3>
+                      <h3 className="font-medium">Telepon</h3>
                       <p className="text-muted-foreground">+1 (555) 123-4567</p>
                     </div>
                   </div>
@@ -347,23 +349,23 @@ export default function HomePage() {
                   <div className="flex items-start">
                     <CalendarRange className="mr-3 h-5 w-5 text-primary" />
                     <div>
-                      <h3 className="font-medium">Reception Hours</h3>
+                      <h3 className="font-medium">Jam Resepsionis</h3>
                       <p className="text-muted-foreground">
-                        24/7, 365 days a year
+                        24 jam, 365 hari dalam setahun
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <Button className="mt-8" asChild>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact">Hubungi Kami</Link>
                 </Button>
               </div>
 
               <div className="relative h-[400px] overflow-hidden rounded-lg">
                 <img
                   src="public/images/10.jpg"
-                  alt="Hotel Map Location"
+                  alt="Lokasi Peta Hotel"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20">
@@ -371,7 +373,7 @@ export default function HomePage() {
                     variant="outline"
                     className="bg-white/80 hover:bg-white"
                   >
-                    View on Map
+                    Lihat di Peta
                   </Button>
                 </div>
               </div>
