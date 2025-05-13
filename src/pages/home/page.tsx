@@ -54,7 +54,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden h-[80vh] w-full">
           <img
-            src="/hotelui/public/images/4.jpg"
+            src="/images/4.jpg"
             alt="Luxury Hotel"
             className="object-cover w-full"
           />
@@ -125,7 +125,7 @@ export default function HomePage() {
               </div>
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <img
-                  src="/hotelui/public/images/8.jpg"
+                  src={"/images/8.jpg"}
                   alt="Hotel Interior"
                   className="object-cover"
                 />
@@ -180,7 +180,7 @@ export default function HomePage() {
               <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src="/hotelui/public/images/2.jpg"
+                    src="/images/2.jpg"
                     alt="Kamar Standard"
                     className="object-cover transition-transform hover:scale-105"
                   />
@@ -220,7 +220,7 @@ export default function HomePage() {
               <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src="/hotelui/public/images/3.jpg"
+                    src="/images/3.jpg"
                     alt="Kamar Deluxe"
                     className="object-cover transition-transform hover:scale-105"
                   />
@@ -260,7 +260,7 @@ export default function HomePage() {
               <Card className="rounded-t-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src="/hotelui/public/images/9.jpg"
+                    src="/images/9.jpg"
                     alt="Suite"
                     className="object-cover transition-transform hover:scale-105"
                   />
@@ -364,7 +364,7 @@ export default function HomePage() {
 
               <div className="relative h-[400px] overflow-hidden rounded-lg">
                 <img
-                  src="/hotelui/public/images/10.jpg"
+                  src="/images/10.jpg"
                   alt="Lokasi Peta Hotel"
                   className="object-cover h-full"
                 />
